@@ -1,0 +1,13 @@
+Virtual Stationarity Runtime
+Copyright 2026 Daniel Kleebinder, Alireza Furutanpey, and Stefan Nastic
+
+This software was developed as part of the research presented in:
+
+Daniel Kleebinder, Alireza Furutanpey, and Stefan Nastic.
+"Migration as a Steady-State Execution Primitive:
+A Runtime for Virtual Stationarity in Low-Earth Orbit."
+Proceedings of the 16th International Conference on the Internet of Things
+(IoT 2026), 2026.
+
+This project includes or derives portions from the WebAssembly Micro Runtime
+(WAMR), which is licensed under the Apache License 2.0 with LLVM exceptions.

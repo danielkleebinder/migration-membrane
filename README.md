@@ -1,3 +1,5 @@
+# Virtual Stationarity Runtime
+
 This repository contains the source code, simulation infrastructure, experiment
 scripts, and evaluation data accompanying our paper:
 
@@ -109,4 +111,13 @@ Add the final DOI / BibTeX entry here once available.
 
 ## License
 
-<!-- Add the repository license here. -->
+This project is licensed under the Apache License 2.0.
+See [LICENSE](LICENSE) and [NOTICE](NOTICE) for details.
+
+If you use this software in academic work, we kindly ask that you cite:
+
+> Daniel Kleebinder, Alireza Furutanpey, and Stefan Nastic.
+> **Migration as a Steady-State Execution Primitive:
+> A Runtime for Virtual Stationarity in Low-Earth Orbit.**
+> In *Proceedings of the 16th International Conference on the Internet of Things
+> (IoT 2026)*, 2026.
