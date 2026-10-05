@@ -1,0 +1,7 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] ERROR: Could not read linear memory
+[LM/Restore] ERROR: Cannot read initial block
+[LM] Error: Failed to migrate from server.

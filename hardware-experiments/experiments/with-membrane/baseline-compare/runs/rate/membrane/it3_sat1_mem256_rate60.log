@@ -1,0 +1,42 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785682121579.530273 ms).
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 256 MB | Rate: 60 MB/s | Step: 10 ms (0.60 MB/iter)
+[WASM] Writing initial test patterns to all 256 MB of pages...
+[WASM] Memory initialized. Starting loop with 60 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.60 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.60 MB @ offset 59 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.60 MB @ offset 119 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.60 MB @ offset 179 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.60 MB @ offset 239 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 0.60 MB @ offset 44 MB (Integrity: OK)
+[WASM] Iteration 600 | Dirtied 0.60 MB @ offset 104 MB (Integrity: OK)
+[WASM] Iteration 700 | Dirtied 0.60 MB @ offset 164 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785682128742.957764 ms)...
+[LM/Checkpoint] Server waiting for membrane connection on port 8011...
+[LM/Checkpoint] Membrane channel connected on port 8011
+[LM/Checkpoint] Sync all to frame at opcode=10 (next=41)
+CHECK: frame 0x5555cccfc9c0, frame->ip 65
+[LM/Checkpoint] Memory snapshot captured after 5.282227 ms
+[LM/Checkpoint] Phase 1.1: Sending state metadata...
+[LM/Checkpoint] Memory metadata transmitted after 0.039551 ms
+[LM/Checkpoint] Phase 1.2: Sending initial bulk memory (256 MB)...
+[LM/Checkpoint] Main interpreter thread halted for 0.046000 ms
+[WASM] Iteration 800 | Dirtied 0.60 MB @ offset 224 MB (Integrity: OK)
+[WASM] Iteration 900 | Dirtied 0.60 MB @ offset 29 MB (Integrity: OK)
+[LM/Checkpoint] Linear memory transmitted after 2309.963623 ms
+[LM/Checkpoint] Wrote stack and shadow stack frames to stream (frame count: 7, frame offset: 2888)
+[LM/Checkpoint] Frames transmitted after 0.019531 ms
+[LM/Checkpoint] Capturing the UDP state took 0.002000 ms (fd: 0, port: 0)
+[LM/Checkpoint] Initial full linear memory handover duration 118.111000 ms
+[LM/Checkpoint] Flushing 0 bytes of buffered membrane events...
+[LM/Checkpoint] Received 0xEOF_RECONSTRUCT, halting execution for final handover (1785682131102.106201 ms)...
+[LM/Checkpoint] Migration server completed its tasks
+[LM/Checkpoint] Initial membrane chunk transmitted after 36.492676 ms
+[LM/Checkpoint] Trying to converge membrane replay log...
+[LM/Checkpoint] Converged naturally! Lag: 35 events (10.467773 ms).
+[LM/Checkpoint] Migration client completed its tasks
+[LM/Checkpoint] Migration completed in 2382.457275 ms
+[LM/Checkpoint] Live migration completed at 1785682131140.052734 ms.
+[LM/Checkpoint] Closing migration connections...
+[LM/Checkpoint] Closed all migration connections!

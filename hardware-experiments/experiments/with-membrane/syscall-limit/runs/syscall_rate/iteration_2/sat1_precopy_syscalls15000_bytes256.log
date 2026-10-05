@@ -1,0 +1,35 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Config: 256 MB | 64.00 MB/s | 15000 Syscalls/s (Type: 2, Modifying: 256 bytes)
+[WASM] Initializing physical memory backing...
+[WASM] Entering execution loop (using bypass)...
+[WASM] Tick 200 | Integrity: OK
+[WASM] Tick 400 | Integrity: OK
+[WASM] Tick 600 | Integrity: OK
+[LM] Client connected. Migration is initiated (1785700968875.895996 ms)...
+[LM] Phase 1: Sending initial bulk memory (256 MB)...
+[WASM] Tick 800 | Integrity: OK
+[WASM] Tick 1000 | Integrity: OK
+[LM] Initial pre-copy of bulk memory completed. Took 2303.690430 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[LM] Number of dirty cards transmitted: 227940
+[LM] Pre-copy Iteration 1: Sent 116705280 bytes.
+[WASM] Tick 1200 | Integrity: OK
+[LM] Number of dirty cards transmitted: 101284
+[LM] Pre-copy Iteration 2: Sent 51857408 bytes.
+[LM] Number of dirty cards transmitted: 45475
+[LM] Pre-copy Iteration 3: Sent 23283200 bytes.
+[LM] Number of dirty cards transmitted: 20322
+[LM] Pre-copy Iteration 4: Sent 10404864 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 1744.748047 ms
+[LM] Bulk + Precopy duration 1544.884000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 11802
+[LM] Send final dirty pages took 25.186000 ms
+[LM] Checkpoint dirty state took 0.082000 ms
+[LM/Checkpoint] Live migration completed at 1785700972991.970215 ms. Migration took 4116.074219 ms
+[LM/Checkpoint] Took 25.414000 ms to checkpoint application

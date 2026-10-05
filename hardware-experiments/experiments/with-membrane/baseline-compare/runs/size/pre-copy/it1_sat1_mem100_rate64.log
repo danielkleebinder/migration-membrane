@@ -1,0 +1,38 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 100 MB | Rate: 64 MB/s | Step: 10 ms (0.64 MB/iter)
+[WASM] Writing initial test patterns to all 100 MB of pages...
+[WASM] Memory initialized. Starting loop with 64 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.64 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.64 MB @ offset 63 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.64 MB @ offset 28 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.64 MB @ offset 92 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.64 MB @ offset 57 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785686234205.989258 ms)...
+[LM] Phase 1: Sending initial bulk memory (100 MB)...
+[WASM] Iteration 500 | Dirtied 0.64 MB @ offset 21 MB (Integrity: OK)
+[LM] Initial pre-copy of bulk memory completed. Took 909.725830 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[LM] Number of dirty cards transmitted: 116661
+[LM] Pre-copy Iteration 1: Sent 59730432 bytes.
+[LM] Number of dirty cards transmitted: 70783
+[LM] Pre-copy Iteration 2: Sent 36240896 bytes.
+[WASM] Iteration 600 | Dirtied 0.64 MB @ offset 85 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 39327
+[LM] Pre-copy Iteration 3: Sent 20135424 bytes.
+[LM] Number of dirty cards transmitted: 23600
+[LM] Pre-copy Iteration 4: Sent 12083200 bytes.
+[LM] Number of dirty cards transmitted: 13112
+[LM] Pre-copy Iteration 5: Sent 6713344 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 1190.839355 ms
+[LM] Bulk + Precopy duration 468.216000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 10491
+[LM] Send final dirty pages took 39.419000 ms
+[LM] Checkpoint dirty state took 0.064000 ms
+[LM/Checkpoint] Live migration completed at 1785686236375.287842 ms. Migration took 2169.298584 ms
+[LM/Checkpoint] Took 39.641000 ms to checkpoint application

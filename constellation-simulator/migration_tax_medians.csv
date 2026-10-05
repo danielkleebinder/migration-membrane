@@ -1,0 +1,4 @@
+experiment,migration_time,source_duration,downtime,host_window,migration_tax,events
+14ms SLO Baseline,3211.878,3207.792,4.085,241.743,1.339,29930
+10ms SLO Target,3229.439,3225.592,3.846,150.586,2.267,30674.5
+6ms SLO Strict,3402.432,3400.648,2.104,82.641,4.403,32919

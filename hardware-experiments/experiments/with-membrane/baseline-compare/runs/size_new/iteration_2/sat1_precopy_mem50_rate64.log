@@ -1,0 +1,36 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 50 MB | Rate: 64 MB/s | Step: 10 ms (0.64 MB/iter)
+[WASM] Writing initial test patterns to all 50 MB of pages...
+[WASM] Memory initialized. Starting loop with 64 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.64 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.64 MB @ offset 14 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.64 MB @ offset 29 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.64 MB @ offset 43 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.64 MB @ offset 9 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 0.64 MB @ offset 23 MB (Integrity: OK)
+[WASM] Iteration 600 | Dirtied 0.64 MB @ offset 38 MB (Integrity: OK)
+[WASM] Iteration 700 | Dirtied 0.64 MB @ offset 3 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785175989150.909668 ms)...
+[LM] Phase 1: Sending initial bulk memory (50 MB)...
+[LM] Initial pre-copy of bulk memory completed. Took 464.302734 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[LM] Number of dirty cards transmitted: 58986
+[LM] Pre-copy Iteration 1: Sent 30200832 bytes.
+[LM] Number of dirty cards transmitted: 35396
+[LM] Pre-copy Iteration 2: Sent 18122752 bytes.
+[WASM] Iteration 800 | Dirtied 0.64 MB @ offset 18 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 18355
+[LM] Pre-copy Iteration 3: Sent 9397760 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 497.117188 ms
+[LM] Bulk + Precopy duration 200.424000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 14424
+[LM] Send final dirty pages took 25.826000 ms
+[LM] Checkpoint dirty state took 0.030000 ms
+[LM/Checkpoint] Live migration completed at 1785175990192.580566 ms. Migration took 1041.670898 ms
+[LM/Checkpoint] Took 26.004000 ms to checkpoint application

@@ -1,0 +1,34 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 50 MB | Rate: 64 MB/s | Step: 10 ms (0.64 MB/iter)
+[WASM] Writing initial test patterns to all 50 MB of pages...
+[WASM] Memory initialized. Starting loop with 64 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.64 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.64 MB @ offset 14 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.64 MB @ offset 29 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.64 MB @ offset 43 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.64 MB @ offset 9 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 0.64 MB @ offset 23 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785174268951.793945 ms)...
+[LM] Phase 1: Sending initial bulk memory (50 MB)...
+[LM] Initial pre-copy of bulk memory completed. Took 469.476318 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[LM] Number of dirty cards transmitted: 61610
+[LM] Pre-copy Iteration 1: Sent 31544320 bytes.
+[LM] Number of dirty cards transmitted: 34082
+[LM] Pre-copy Iteration 2: Sent 17449984 bytes.
+[WASM] Iteration 600 | Dirtied 0.64 MB @ offset 38 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 19666
+[LM] Pre-copy Iteration 3: Sent 10068992 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 504.402588 ms
+[LM] Bulk + Precopy duration 186.489000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 14425
+[LM] Send final dirty pages took 27.875000 ms
+[LM] Checkpoint dirty state took 0.046000 ms
+[LM/Checkpoint] Live migration completed at 1785174269996.337891 ms. Migration took 1044.543945 ms
+[LM/Checkpoint] Took 28.056000 ms to checkpoint application

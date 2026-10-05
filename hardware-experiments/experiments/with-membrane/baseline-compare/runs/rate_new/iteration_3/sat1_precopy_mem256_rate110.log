@@ -1,0 +1,308 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 256 MB | Rate: 110 MB/s | Step: 10 ms (1.10 MB/iter)
+[WASM] Writing initial test patterns to all 256 MB of pages...
+[WASM] Memory initialized. Starting loop with 110 MB updates per second...
+[WASM] Iteration 0 | Dirtied 1.10 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 1.10 MB @ offset 109 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 1.10 MB @ offset 219 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 1.10 MB @ offset 75 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 1.10 MB @ offset 185 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 1.10 MB @ offset 40 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785172626536.723877 ms)...
+[LM] Phase 1: Sending initial bulk memory (256 MB)...
+[WASM] Iteration 600 | Dirtied 1.10 MB @ offset 150 MB (Integrity: OK)
+[WASM] Iteration 700 | Dirtied 1.10 MB @ offset 5 MB (Integrity: OK)
+[LM] Initial pre-copy of bulk memory completed. Took 2322.299805 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[WASM] Iteration 800 | Dirtied 1.10 MB @ offset 115 MB (Integrity: OK)
+[WASM] Iteration 900 | Dirtied 1.10 MB @ offset 225 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 513644
+[LM] Pre-copy Iteration 1: Sent 262985728 bytes.
+[WASM] Iteration 1000 | Dirtied 1.10 MB @ offset 80 MB (Integrity: OK)
+[WASM] Iteration 1100 | Dirtied 1.10 MB @ offset 190 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 500130
+[LM] Pre-copy Iteration 2: Sent 256066560 bytes.
+[WASM] Iteration 1200 | Dirtied 1.10 MB @ offset 45 MB (Integrity: OK)
+[WASM] Iteration 1300 | Dirtied 1.10 MB @ offset 155 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 486611
+[LM] Pre-copy Iteration 3: Sent 249144832 bytes.
+[WASM] Iteration 1400 | Dirtied 1.10 MB @ offset 10 MB (Integrity: OK)
+[WASM] Iteration 1500 | Dirtied 1.10 MB @ offset 120 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 470841
+[LM] Pre-copy Iteration 4: Sent 241070592 bytes.
+[WASM] Iteration 1600 | Dirtied 1.10 MB @ offset 230 MB (Integrity: OK)
+[WASM] Iteration 1700 | Dirtied 1.10 MB @ offset 85 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 457325
+[LM] Pre-copy Iteration 5: Sent 234150400 bytes.
+[WASM] Iteration 1800 | Dirtied 1.10 MB @ offset 195 MB (Integrity: OK)
+[WASM] Iteration 1900 | Dirtied 1.10 MB @ offset 50 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 446061
+[LM] Pre-copy Iteration 6: Sent 228383232 bytes.
+[WASM] Iteration 2000 | Dirtied 1.10 MB @ offset 160 MB (Integrity: OK)
+[WASM] Iteration 2100 | Dirtied 1.10 MB @ offset 15 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 434798
+[LM] Pre-copy Iteration 7: Sent 222616576 bytes.
+[WASM] Iteration 2200 | Dirtied 1.10 MB @ offset 125 MB (Integrity: OK)
+[WASM] Iteration 2300 | Dirtied 1.10 MB @ offset 235 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 421280
+[LM] Pre-copy Iteration 8: Sent 215695360 bytes.
+[WASM] Iteration 2400 | Dirtied 1.10 MB @ offset 90 MB (Integrity: OK)
+[WASM] Iteration 2500 | Dirtied 1.10 MB @ offset 200 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 410017
+[LM] Pre-copy Iteration 9: Sent 209928704 bytes.
+[WASM] Iteration 2600 | Dirtied 1.10 MB @ offset 56 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 403257
+[LM] Pre-copy Iteration 10: Sent 206467584 bytes.
+[WASM] Iteration 2700 | Dirtied 1.10 MB @ offset 166 MB (Integrity: OK)
+[WASM] Iteration 2800 | Dirtied 1.10 MB @ offset 21 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 391994
+[LM] Pre-copy Iteration 11: Sent 200700928 bytes.
+[WASM] Iteration 2900 | Dirtied 1.10 MB @ offset 131 MB (Integrity: OK)
+[WASM] Iteration 3000 | Dirtied 1.10 MB @ offset 241 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 378478
+[LM] Pre-copy Iteration 12: Sent 193780736 bytes.
+[WASM] Iteration 3100 | Dirtied 1.10 MB @ offset 96 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 371719
+[LM] Pre-copy Iteration 13: Sent 190320128 bytes.
+[WASM] Iteration 3200 | Dirtied 1.10 MB @ offset 206 MB (Integrity: OK)
+[WASM] Iteration 3300 | Dirtied 1.10 MB @ offset 61 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 360453
+[LM] Pre-copy Iteration 14: Sent 184551936 bytes.
+[WASM] Iteration 3400 | Dirtied 1.10 MB @ offset 171 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 351445
+[LM] Pre-copy Iteration 15: Sent 179939840 bytes.
+[WASM] Iteration 3500 | Dirtied 1.10 MB @ offset 26 MB (Integrity: OK)
+[WASM] Iteration 3600 | Dirtied 1.10 MB @ offset 136 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 342433
+[LM] Pre-copy Iteration 16: Sent 175325696 bytes.
+[WASM] Iteration 3700 | Dirtied 1.10 MB @ offset 246 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 331167
+[LM] Pre-copy Iteration 17: Sent 169557504 bytes.
+[WASM] Iteration 3800 | Dirtied 1.10 MB @ offset 101 MB (Integrity: OK)
+[WASM] Iteration 3900 | Dirtied 1.10 MB @ offset 211 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 324411
+[LM] Pre-copy Iteration 18: Sent 166098432 bytes.
+[WASM] Iteration 4000 | Dirtied 1.10 MB @ offset 66 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 315398
+[LM] Pre-copy Iteration 19: Sent 161483776 bytes.
+[WASM] Iteration 4100 | Dirtied 1.10 MB @ offset 176 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 306388
+[LM] Pre-copy Iteration 20: Sent 156870656 bytes.
+[WASM] Iteration 4200 | Dirtied 1.10 MB @ offset 31 MB (Integrity: OK)
+[WASM] Iteration 4300 | Dirtied 1.10 MB @ offset 141 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 297377
+[LM] Pre-copy Iteration 21: Sent 152257024 bytes.
+[WASM] Iteration 4400 | Dirtied 1.10 MB @ offset 251 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 288364
+[LM] Pre-copy Iteration 22: Sent 147642368 bytes.
+[WASM] Iteration 4500 | Dirtied 1.10 MB @ offset 106 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 281608
+[LM] Pre-copy Iteration 23: Sent 144183296 bytes.
+[WASM] Iteration 4600 | Dirtied 1.10 MB @ offset 216 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 277100
+[LM] Pre-copy Iteration 24: Sent 141875200 bytes.
+[WASM] Iteration 4700 | Dirtied 1.10 MB @ offset 71 MB (Integrity: OK)
+[WASM] Iteration 4800 | Dirtied 1.10 MB @ offset 181 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 268091
+[LM] Pre-copy Iteration 25: Sent 137262592 bytes.
+[WASM] Iteration 4900 | Dirtied 1.10 MB @ offset 37 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 268089
+[LM] Pre-copy Iteration 26: Sent 137261568 bytes.
+[WASM] Iteration 5000 | Dirtied 1.10 MB @ offset 147 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 261333
+[LM] Pre-copy Iteration 27: Sent 133802496 bytes.
+[WASM] Iteration 5100 | Dirtied 1.10 MB @ offset 2 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 254573
+[LM] Pre-copy Iteration 28: Sent 130341376 bytes.
+[WASM] Iteration 5200 | Dirtied 1.10 MB @ offset 112 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 247815
+[LM] Pre-copy Iteration 29: Sent 126881280 bytes.
+[WASM] Iteration 5300 | Dirtied 1.10 MB @ offset 222 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 241056
+[LM] Pre-copy Iteration 30: Sent 123420672 bytes.
+[WASM] Iteration 5400 | Dirtied 1.10 MB @ offset 77 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 234299
+[LM] Pre-copy Iteration 31: Sent 119961088 bytes.
+[WASM] Iteration 5500 | Dirtied 1.10 MB @ offset 187 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 227538
+[LM] Pre-copy Iteration 32: Sent 116499456 bytes.
+[WASM] Iteration 5600 | Dirtied 1.10 MB @ offset 42 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 223034
+[LM] Pre-copy Iteration 33: Sent 114193408 bytes.
+[WASM] Iteration 5700 | Dirtied 1.10 MB @ offset 152 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 214024
+[LM] Pre-copy Iteration 34: Sent 109580288 bytes.
+[WASM] Iteration 5800 | Dirtied 1.10 MB @ offset 7 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 209516
+[LM] Pre-copy Iteration 35: Sent 107272192 bytes.
+[WASM] Iteration 5900 | Dirtied 1.10 MB @ offset 117 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 205013
+[LM] Pre-copy Iteration 36: Sent 104966656 bytes.
+[WASM] Iteration 6000 | Dirtied 1.10 MB @ offset 227 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 198252
+[LM] Pre-copy Iteration 37: Sent 101505024 bytes.
+[LM] Number of dirty cards transmitted: 191495
+[LM] Pre-copy Iteration 38: Sent 98045440 bytes.
+[WASM] Iteration 6100 | Dirtied 1.10 MB @ offset 82 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 186989
+[LM] Pre-copy Iteration 39: Sent 95738368 bytes.
+[WASM] Iteration 6200 | Dirtied 1.10 MB @ offset 192 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 182483
+[LM] Pre-copy Iteration 40: Sent 93431296 bytes.
+[WASM] Iteration 6300 | Dirtied 1.10 MB @ offset 47 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 175725
+[LM] Pre-copy Iteration 41: Sent 89971200 bytes.
+[LM] Number of dirty cards transmitted: 171221
+[LM] Pre-copy Iteration 42: Sent 87665152 bytes.
+[WASM] Iteration 6400 | Dirtied 1.10 MB @ offset 157 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 166711
+[LM] Pre-copy Iteration 43: Sent 85356032 bytes.
+[WASM] Iteration 6500 | Dirtied 1.10 MB @ offset 12 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 162208
+[LM] Pre-copy Iteration 44: Sent 83050496 bytes.
+[WASM] Iteration 6600 | Dirtied 1.10 MB @ offset 122 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 157704
+[LM] Pre-copy Iteration 45: Sent 80744448 bytes.
+[LM] Number of dirty cards transmitted: 155449
+[LM] Pre-copy Iteration 46: Sent 79589888 bytes.
+[WASM] Iteration 6700 | Dirtied 1.10 MB @ offset 232 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 150943
+[LM] Pre-copy Iteration 47: Sent 77282816 bytes.
+[WASM] Iteration 6800 | Dirtied 1.10 MB @ offset 87 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 144187
+[LM] Pre-copy Iteration 48: Sent 73823744 bytes.
+[LM] Number of dirty cards transmitted: 141933
+[LM] Pre-copy Iteration 49: Sent 72669696 bytes.
+[WASM] Iteration 6900 | Dirtied 1.10 MB @ offset 197 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 137425
+[LM] Pre-copy Iteration 50: Sent 70361600 bytes.
+[LM] Number of dirty cards transmitted: 132922
+[LM] Pre-copy Iteration 51: Sent 68056064 bytes.
+[WASM] Iteration 7000 | Dirtied 1.10 MB @ offset 52 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 128415
+[LM] Pre-copy Iteration 52: Sent 65748480 bytes.
+[LM] Number of dirty cards transmitted: 126164
+[LM] Pre-copy Iteration 53: Sent 64595968 bytes.
+[WASM] Iteration 7100 | Dirtied 1.10 MB @ offset 162 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 123908
+[LM] Pre-copy Iteration 54: Sent 63440896 bytes.
+[WASM] Iteration 7200 | Dirtied 1.10 MB @ offset 18 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 121658
+[LM] Pre-copy Iteration 55: Sent 62288896 bytes.
+[LM] Number of dirty cards transmitted: 126164
+[LM] Pre-copy Iteration 56: Sent 64595968 bytes.
+[WASM] Iteration 7300 | Dirtied 1.10 MB @ offset 128 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 132921
+[LM] Pre-copy Iteration 57: Sent 68055552 bytes.
+[LM] Number of dirty cards transmitted: 128415
+[LM] Pre-copy Iteration 58: Sent 65748480 bytes.
+[WASM] Iteration 7400 | Dirtied 1.10 MB @ offset 238 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 123909
+[LM] Pre-copy Iteration 59: Sent 63441408 bytes.
+[LM] Number of dirty cards transmitted: 121660
+[LM] Pre-copy Iteration 60: Sent 62289920 bytes.
+[WASM] Iteration 7500 | Dirtied 1.10 MB @ offset 93 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 119403
+[LM] Pre-copy Iteration 61: Sent 61134336 bytes.
+[LM] Number of dirty cards transmitted: 114899
+[LM] Pre-copy Iteration 62: Sent 58828288 bytes.
+[WASM] Iteration 7600 | Dirtied 1.10 MB @ offset 203 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 112645
+[LM] Pre-copy Iteration 63: Sent 57674240 bytes.
+[LM] Number of dirty cards transmitted: 108141
+[LM] Pre-copy Iteration 64: Sent 55368192 bytes.
+[WASM] Iteration 7700 | Dirtied 1.10 MB @ offset 58 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 108140
+[LM] Pre-copy Iteration 65: Sent 55367680 bytes.
+[LM] Number of dirty cards transmitted: 103636
+[LM] Pre-copy Iteration 66: Sent 53061632 bytes.
+[WASM] Iteration 7800 | Dirtied 1.10 MB @ offset 168 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 99127
+[LM] Pre-copy Iteration 67: Sent 50753024 bytes.
+[LM] Number of dirty cards transmitted: 96878
+[LM] Pre-copy Iteration 68: Sent 49601536 bytes.
+[LM] Number of dirty cards transmitted: 94622
+[LM] Pre-copy Iteration 69: Sent 48446464 bytes.
+[WASM] Iteration 7900 | Dirtied 1.10 MB @ offset 23 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 92371
+[LM] Pre-copy Iteration 70: Sent 47293952 bytes.
+[LM] Number of dirty cards transmitted: 90119
+[LM] Pre-copy Iteration 71: Sent 46140928 bytes.
+[WASM] Iteration 8000 | Dirtied 1.10 MB @ offset 133 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 85611
+[LM] Pre-copy Iteration 72: Sent 43832832 bytes.
+[LM] Number of dirty cards transmitted: 85612
+[LM] Pre-copy Iteration 73: Sent 43833344 bytes.
+[LM] Number of dirty cards transmitted: 81106
+[LM] Pre-copy Iteration 74: Sent 41526272 bytes.
+[WASM] Iteration 8100 | Dirtied 1.10 MB @ offset 243 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 81106
+[LM] Pre-copy Iteration 75: Sent 41526272 bytes.
+[LM] Number of dirty cards transmitted: 78856
+[LM] Pre-copy Iteration 76: Sent 40374272 bytes.
+[LM] Number of dirty cards transmitted: 76600
+[LM] Pre-copy Iteration 77: Sent 39219200 bytes.
+[WASM] Iteration 8200 | Dirtied 1.10 MB @ offset 98 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 74347
+[LM] Pre-copy Iteration 78: Sent 38065664 bytes.
+[LM] Number of dirty cards transmitted: 72097
+[LM] Pre-copy Iteration 79: Sent 36913664 bytes.
+[LM] Number of dirty cards transmitted: 69841
+[LM] Pre-copy Iteration 80: Sent 35758592 bytes.
+[WASM] Iteration 8300 | Dirtied 1.10 MB @ offset 208 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 67589
+[LM] Pre-copy Iteration 81: Sent 34605568 bytes.
+[LM] Number of dirty cards transmitted: 65338
+[LM] Pre-copy Iteration 82: Sent 33453056 bytes.
+[LM] Number of dirty cards transmitted: 63083
+[LM] Pre-copy Iteration 83: Sent 32298496 bytes.
+[LM] Number of dirty cards transmitted: 63084
+[LM] Pre-copy Iteration 84: Sent 32299008 bytes.
+[WASM] Iteration 8400 | Dirtied 1.10 MB @ offset 63 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 60831
+[LM] Pre-copy Iteration 85: Sent 31145472 bytes.
+[LM] Number of dirty cards transmitted: 58580
+[LM] Pre-copy Iteration 86: Sent 29992960 bytes.
+[LM] Number of dirty cards transmitted: 56325
+[LM] Pre-copy Iteration 87: Sent 28838400 bytes.
+[LM] Number of dirty cards transmitted: 54071
+[LM] Pre-copy Iteration 88: Sent 27684352 bytes.
+[WASM] Iteration 8500 | Dirtied 1.10 MB @ offset 173 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 54072
+[LM] Pre-copy Iteration 89: Sent 27684864 bytes.
+[LM] Number of dirty cards transmitted: 51821
+[LM] Pre-copy Iteration 90: Sent 26532352 bytes.
+[LM] Number of dirty cards transmitted: 51820
+[LM] Pre-copy Iteration 91: Sent 26531840 bytes.
+[LM] Number of dirty cards transmitted: 51819
+[LM] Pre-copy Iteration 92: Sent 26531328 bytes.
+[LM] Number of dirty cards transmitted: 47316
+[LM] Pre-copy Iteration 93: Sent 24225792 bytes.
+[WASM] Iteration 8600 | Dirtied 1.10 MB @ offset 28 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 47313
+[LM] Pre-copy Iteration 94: Sent 24224256 bytes.
+[LM] Number of dirty cards transmitted: 45063
+[LM] Pre-copy Iteration 95: Sent 23072256 bytes.
+[LM] Number of dirty cards transmitted: 45061
+[LM] Pre-copy Iteration 96: Sent 23071232 bytes.
+[LM] Number of dirty cards transmitted: 45061
+[LM] Pre-copy Iteration 97: Sent 23071232 bytes.
+[LM] Number of dirty cards transmitted: 42809
+[LM] Pre-copy Iteration 98: Sent 21918208 bytes.
+[WASM] Iteration 8700 | Dirtied 1.10 MB @ offset 138 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 42807
+[LM] Pre-copy Iteration 99: Sent 21917184 bytes.
+[LM] Number of dirty cards transmitted: 40557
+[LM] Pre-copy Iteration 100: Sent 20765184 bytes.
+[LM] Incremental pre-copy completed. Took 81751.783447 ms
+[LM] Bulk + Precopy duration 25002.658000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 45061
+[LM] Send final dirty pages took 62.790000 ms
+[LM] Checkpoint dirty state took 0.071000 ms
+[LM/Checkpoint] Live migration completed at 1785172710819.385986 ms. Migration took 84282.662109 ms
+[LM/Checkpoint] Took 62.992000 ms to checkpoint application

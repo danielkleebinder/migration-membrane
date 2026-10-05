@@ -1,0 +1,22 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 4, frame offset: 548)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785771963812.375488 ms).
+[LM/Checkpoint] Migration server completed its tasks (1785771963819.568604 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785771963819.578613 ms)
+[LM/Restore] State restoration complete (1785771963819.595215 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785771963819.677979 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x5555be3a30b0 cur_frame=0x5555be3a7f8c module_inst=0x5555be3a1990 function=0x5555be3a1f40 prev_frame=0x5555be3a7e6c ip=0x7fff4107c69f (offset=843, is_import=0) 1785771963819.689697 ms
+[LM/Resume] New function array base=0x5555be3a1cd0 count=93
+[LM/Resume] Took 0.008000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785771963819.697510)
+[LM] Server waiting for connection on port 8010...
+[WASM] Tick 800 | Integrity: OK
+[WASM] Tick 1000 | Integrity: OK
+[WASM] Tick 1200 | Integrity: OK

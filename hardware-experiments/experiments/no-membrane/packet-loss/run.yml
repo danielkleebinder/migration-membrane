@@ -1,0 +1,405 @@
+---
+# STEP 1: Global fact gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+
+# STEP 2: Prepare satellite nodes to allow CRIU checkpointing
+- name: Prepare Satellite Nodes
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Create high-performance ramdisk mount point
+      ansible.builtin.file:
+        path: /mnt/ramdisk
+        state: directory
+        mode: "0777"
+
+    - name: Mount volatile ramdisk storage layer
+      ansible.posix.mount:
+        path: /mnt/ramdisk
+        src: tmpfs
+        fstype: tmpfs
+        opts: "size=512M,mode=0777"
+        state: mounted
+
+    - name: Verify experimental features are enabled in Docker
+      ansible.builtin.copy:
+        dest: /etc/docker/daemon.json
+        content: |
+          {
+            "experimental": true
+          }
+        mode: "0644"
+      register: docker_config
+
+    - name: Restart Docker if config changed
+      ansible.builtin.command: docker restart
+      when: docker_config.changed
+
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+      loop:
+        - /home/pi/packet-loss-sim
+        - /home/pi/packet-loss-sim/data
+        - /home/pi/packet-loss-sim/checkpoints
+        - /mnt/ramdisk/packet-loss-sim
+        - /mnt/ramdisk/packet-loss-sim/data
+        - /mnt/ramdisk/packet-loss-sim/checkpoints
+
+    - name: Reset log files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+          - /home/pi/packet-loss-sim/data/results_packet_loss.csv
+          - /mnt/ramdisk/packet-loss-sim/data/results_packet_loss.csv
+
+    - name: Force-load kernel network diagnostic modules for UDP tracking
+      community.general.modprobe:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - inet_diag
+        - udp_diag
+
+    - name: Stop receiver container
+      ansible.builtin.command: docker stop sat-receiver
+      failed_when: false
+
+    - name: Remove receiver container
+      ansible.builtin.command: docker rm sat-receiver
+      failed_when: false
+
+# STEP 2.1: Delete image on sat2
+- name: Prepare Satellite Nodes
+  hosts: sat2
+  become: true
+  tasks:
+    - name: Remove receiver image
+      ansible.builtin.command: docker image rm xr-receiver:latest
+      failed_when: false
+
+# STEP 3: Prepare sensor node to send XR packets
+- name: Prepare Sensor Node
+  hosts: sensor
+  become: true
+  tasks:
+    - name: Ensure packet-loss directory exists on sensor
+      ansible.builtin.file:
+        path: /home/pi/packet-loss-sim
+        state: directory
+        mode: "0755"
+        owner: pi
+
+    - name: Copy sender assets to sensor
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/packet-loss-sim/{{ item | basename }}"
+        mode: "0755"
+      loop:
+        - sender.py
+        - ../../datasets/50mbps_su_dcf_full.csv
+
+# STEP 3.1: Configure Traffic Control on Sat1
+- name: Configure Network Emulation on Sat1
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Sat2-bound Egress Traffic
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sat1 to Sat2 Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 4ms 1ms distribution normal loss 0.1%"
+
+    - name: Bind Sat2 Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.12 flowid 1:1"
+
+    # Class 1:2 -> Handles Sensor-bound Egress Traffic
+    - name: Define Class 1:2 for Sensor Return Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:2 htb rate 10gbit"
+
+    - name: Apply Sat1 to Sensor Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:2 handle 20: netem delay 12ms 4ms distribution normal loss 2%"
+
+    - name: Bind Sensor Destination IP Filter to Class 1:2
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.14 flowid 1:2"
+
+# STEP 3.2: Configure Traffic Control on Sat2
+- name: Configure Network Emulation on Sat2
+  hosts: sat2
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Sat1-bound Egress Traffic
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sat2 to Sat1 Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 4ms 1ms distribution normal loss 0.1%"
+
+    - name: Bind Sat1 Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.11 flowid 1:1"
+
+    # Class 1:2 -> Handles Sensor-bound Egress Traffic
+    - name: Define Class 1:2 for Sensor Return Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:2 htb rate 10gbit"
+
+    - name: Apply Sat2 to Sensor Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:2 handle 20: netem delay 12ms 4ms distribution normal loss 2%"
+
+    - name: Bind Sensor Destination IP Filter to Class 1:2
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.14 flowid 1:2"
+
+# STEP 3.3: Configure Traffic Control on the Sensor Node
+- name: Configure Network Emulation on Sensor
+  hosts: sensor
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Outbound Telemetry Streams to All Satellites
+    - name: Define Class 1:1 for Satellite Targets
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sensor to Satellite Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 12ms 4ms distribution normal loss 2%"
+
+    - name: Route Sat1 Ingress Targets to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.11 flowid 1:1"
+
+    - name: Route Sat2 Ingress Targets to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.12 flowid 1:1"
+
+# STEP 4: Build image on sat1
+- name: Build Receiver Image on Sat1
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Copy receiver and Dockerfile to sat1
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/packet-loss-sim/{{ item }}"
+        mode: "0644"
+      loop:
+        - receiver.py
+        - Dockerfile
+
+    - name: Build image on sat1
+      community.docker.docker_image:
+        name: xr-receiver
+        tag: latest
+        source: build
+        build:
+          path: /home/pi/packet-loss-sim
+        state: present
+
+# STEP 5: Start the Receiver Container on Sat1 FIRST (Creates the socket file)
+- name: Start Receiver Container on Sat1
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Start sat-receiver container on sat1
+      ansible.builtin.command: >
+        docker run --name sat-receiver --network=host --privileged -v /mnt/ramdisk/packet-loss-sim/data:/data -d xr-receiver
+
+    - name: Ensure socat is installed
+      ansible.builtin.package:
+        name: socat
+        state: present
+
+    - name: Start single-process high-performance proxy listener
+      ansible.builtin.command: >
+        socat UDP4-LISTEN:5005,reuseaddr,rcvbuf=1048576 UNIX-SENDTO:/mnt/ramdisk/packet-loss-sim/data/xr_ingress.sock
+      async: 600
+      poll: 0
+
+# STEP 7: Start the Sender stream on Sensor
+- name: Start Sender on Sensor
+  hosts: sensor
+  tasks:
+    - name: Run sender.py asynchronously
+      ansible.builtin.shell: "python3 /home/pi/packet-loss-sim/sender.py > /home/pi/packet-loss-sim/sender.log 2>&1"
+      args:
+        chdir: /home/pi/packet-loss-sim
+      async: 600
+      poll: 0
+
+# STEP 8: Let the simulation stream run into the workout loop
+- name: Settle simulation before migration
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Pause for data accumulation
+      ansible.builtin.pause:
+        seconds: 15
+
+# STEP 9: Safe Native Migration handling
+- name: Perform Live-Migration from Sat1 to Sat2
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Stream container image directly to sat2
+      ansible.builtin.shell: |
+        docker save xr-receiver:latest | ssh -o StrictHostKeyChecking=no root@sat2 "docker load"
+
+    - name: Clear old checkpoint files
+      ansible.builtin.file:
+        path: /mnt/ramdisk/packet-loss-sim/checkpoints/cp_handover
+        state: absent
+
+    - name: Notify sender to switch to sat2
+      delegate_to: sensor
+      ansible.builtin.command: pkill -SIGUSR1 -f sender.py
+      failed_when: false
+
+    - name: Create native Docker checkpoint
+      ansible.builtin.command: docker checkpoint create --checkpoint-dir=/mnt/ramdisk/packet-loss-sim/checkpoints sat-receiver cp_handover
+
+    - name: Synchronize checkpoint files to Sat2
+      ansible.builtin.command: rsync -avz --delete /mnt/ramdisk/packet-loss-sim/checkpoints/ root@sat2:/mnt/ramdisk/packet-loss-sim/checkpoints/
+
+    - name: Synchronize state files to Sat2
+      ansible.builtin.command: rsync -avz --delete /mnt/ramdisk/packet-loss-sim/data/results_packet_loss.csv root@sat2:/mnt/ramdisk/packet-loss-sim/data/results_packet_loss.csv
+
+# STEP 10: Inject State and Restore Natively on Sat2
+- name: Restore Receiver Container on Sat2
+  hosts: sat2
+  become: true
+  tasks:
+    - name: Remove any old container instance if it exists
+      community.docker.docker_container:
+        name: sat-receiver
+        state: absent
+        force_kill: true
+
+    - name: Pre-create empty container container shell on Sat2
+      ansible.builtin.command: >
+        docker create --name sat-receiver --network=host --privileged -v /mnt/ramdisk/packet-loss-sim/data:/data xr-receiver
+
+    - name: Fetch Sat2 container ID hash
+      ansible.builtin.command: docker inspect --format='{% raw %}{{.Id}}{% endraw %}' sat-receiver
+      register: sat2_id
+      changed_when: false
+
+    - name: Print Container ID on Sat2
+      ansible.builtin.debug:
+        msg: "Container ID on Sat2: {{ sat2_id.stdout }}"
+
+    - name: Create internal checkpoints subdirectory inside Docker root tree
+      ansible.builtin.file:
+        path: "/var/lib/docker/containers/{{ sat2_id.stdout }}/checkpoints"
+        state: directory
+        mode: "0700"
+        owner: root
+        group: root
+
+    - name: Move memory states from tmp staging into the live container tree
+      ansible.builtin.copy:
+        src: /mnt/ramdisk/packet-loss-sim/checkpoints/cp_handover
+        dest: "/var/lib/docker/containers/{{ sat2_id.stdout }}/checkpoints/"
+        remote_src: true
+        mode: "0700"
+        owner: root
+        group: root
+
+    - name: Restore execution from checkpoint state
+      ansible.builtin.command: docker start --checkpoint cp_handover sat-receiver
+
+    - name: Ensure socat is installed
+      ansible.builtin.package:
+        name: socat
+        state: present
+
+    - name: Start single-process high-performance proxy listener
+      ansible.builtin.command: >
+        socat UDP4-LISTEN:5005,reuseaddr,rcvbuf=1048576 UNIX-SENDTO:/mnt/ramdisk/packet-loss-sim/data/xr_ingress.sock
+      async: 600
+      poll: 0
+
+# STEP 11: Let the simulation stream run into the workout loop
+- name: Settle simulation before migration
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Pause for data accumulation after migration
+      ansible.builtin.pause:
+        seconds: 20
+
+# STEP 12: Teardown Experiment Infrastructure
+- name: Teardown Experiment Infrastructure
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Kill socat
+      ansible.builtin.command: killall socat
+      failed_when: false
+
+# STEP 13: Retrieve logs
+- name: Retrieve logs
+  hosts: all
+  tasks:
+    - name: Read sender log
+      ansible.builtin.command: cat /home/pi/packet-loss-sim/sender.log
+      register: sender_output
+      when: inventory_hostname == 'sensor'
+      changed_when: false
+
+    - name: Get sat-receiver logs from satellites
+      ansible.builtin.command: docker logs sat-receiver
+      register: receiver_logs
+      when: "'satellites' in group_names"
+      failed_when: false
+      changed_when: false
+
+    - name: Display sender logs
+      ansible.builtin.debug:
+        var: sender_output.stdout_lines
+      when: inventory_hostname == 'sensor'
+
+    - name: Display sat-receiver logs
+      ansible.builtin.debug:
+        var: receiver_logs.stdout_lines
+      when: "'satellites' in group_names"
+
+# STEP 14: Cleanup Containers
+- name: Cleanup Containers and retrieve results
+  hosts: sat2
+  become: true
+  tasks:
+    - name: Collect results back to the local host machine
+      ansible.builtin.fetch:
+        src: /mnt/ramdisk/packet-loss-sim/data/results_packet_loss.csv
+        dest: ./results_packet_loss.csv
+        flat: true
+
+    - name: Stop and remove containers
+      community.docker.docker_container:
+        name: sat-receiver
+        state: absent
+        force_kill: true

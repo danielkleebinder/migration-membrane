@@ -1,0 +1,39 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] Membrane channel connected to 192.168.10.11:8011
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 7, frame offset: 1464)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785700838556.260986 ms).
+[LM/Restore] Enter membrane replay mode (1785700838556.288086 ms)...
+[LM/Checkpoint] Migration server completed its tasks (1785700838563.665039 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785700838563.676514 ms)
+[LM/Restore] State restoration complete (1785700838563.694824 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785700838563.763916 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x5555ccc570b0 cur_frame=0x5555ccc5c320 module_inst=0x5555ccc55990 function=0x5555ccc56300 prev_frame=0x5555ccc5c214 ip=0x7fff8622ec40 (offset=14, is_import=0) 1785700838563.772949 ms
+[LM/Resume] New function array base=0x5555ccc55cd0 count=93
+[LM/Resume] Took 0.007000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785700838563.780518)
+[LM] Server waiting for connection on port 8010...
+[LM/Restore] Closed side sock fd 5
+[LM/Restore] Read 62696 membrane events
+[LM/Restore] Live migration restored at 1785700842038.666260 ms
+[WASM] Tick 1800 | Integrity: OK
+[WASM] Tick 2000 | Integrity: OK
+[WASM] Tick 2200 | Integrity: OK
+[WASM] Tick 2400 | Integrity: OK
+[WASM] Tick 2600 | Integrity: OK
+[WASM] Tick 2800 | Integrity: OK
+[WASM] Tick 3000 | Integrity: OK
+[WASM] Tick 3200 | Integrity: OK
+[WASM] Tick 3400 | Integrity: OK
+[WASM] Tick 3600 | Integrity: OK
+[WASM] Tick 3800 | Integrity: OK
+[WASM] Tick 4000 | Integrity: OK
+[WASM] Tick 4200 | Integrity: OK
+[WASM] Tick 4400 | Integrity: OK
+[WASM] Tick 4600 | Integrity: OK

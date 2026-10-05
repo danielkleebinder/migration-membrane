@@ -1,0 +1,40 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 256 MB | Rate: 50 MB/s | Step: 10 ms (0.50 MB/iter)
+[WASM] Writing initial test patterns to all 256 MB of pages...
+[WASM] Memory initialized. Starting loop with 50 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.50 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.50 MB @ offset 50 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.50 MB @ offset 100 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.50 MB @ offset 150 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.50 MB @ offset 200 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785168419475.842773 ms)...
+[LM] Phase 1: Sending initial bulk memory (256 MB)...
+[WASM] Iteration 500 | Dirtied 0.50 MB @ offset 250 MB (Integrity: OK)
+[WASM] Iteration 600 | Dirtied 0.50 MB @ offset 44 MB (Integrity: OK)
+[LM] Initial pre-copy of bulk memory completed. Took 2307.204834 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[WASM] Iteration 700 | Dirtied 0.50 MB @ offset 94 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 233479
+[LM] Pre-copy Iteration 1: Sent 119541248 bytes.
+[LM] Number of dirty cards transmitted: 104455
+[LM] Pre-copy Iteration 2: Sent 53480960 bytes.
+[LM] Number of dirty cards transmitted: 46084
+[LM] Pre-copy Iteration 3: Sent 23595008 bytes.
+[WASM] Iteration 800 | Dirtied 0.50 MB @ offset 144 MB (Integrity: OK)
+[LM] Number of dirty cards transmitted: 20485
+[LM] Pre-copy Iteration 4: Sent 10488320 bytes.
+[LM] Number of dirty cards transmitted: 10247
+[LM] Pre-copy Iteration 5: Sent 5246464 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 1826.248291 ms
+[LM] Bulk + Precopy duration 660.954000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 6149
+[LM] Send final dirty pages took 16.493000 ms
+[LM] Checkpoint dirty state took 0.068000 ms
+[LM/Checkpoint] Live migration completed at 1785168423659.694580 ms. Migration took 4183.852051 ms
+[LM/Checkpoint] Took 16.707000 ms to checkpoint application

@@ -1,0 +1,174 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785771441947.524902 ms).
+[LM] Server waiting for connection on port 8010...
+[WASM] Config: 256 MB | 64.00 MB/s | 23000 Syscalls/s (Type: 2, Modifying: 256 bytes)
+[WASM] Initializing physical memory backing...
+[WASM] Entering execution loop (using bypass)...
+[WASM] Tick 200 | Integrity: OK
+[WASM] Tick 400 | Integrity: OK
+[WASM] Tick 600 | Integrity: OK
+[WASM] Tick 800 | Integrity: OK
+[LM] Client connected. Migration is initiated (1785771447283.437744 ms)...
+[LM/Checkpoint] Server waiting for membrane connection on port 8011...
+[LM/Checkpoint] Membrane channel connected on port 8011
+[LM/Checkpoint] Sync all to frame at opcode=10 (next=1a)
+CHECK: frame 0x555592467f8c, frame->ip 26
+[LM/Checkpoint] Memory snapshot captured after 1.077637 ms
+[LM/Checkpoint] Phase 1.1: Sending state metadata...
+[LM/Checkpoint] Memory metadata transmitted after 0.033447 ms
+[LM/Checkpoint] Phase 1.2: Sending initial bulk memory (256 MB)...
+[LM/Checkpoint] Main interpreter thread halted for 1.153000 ms
+[LM/Checkpoint] Batched 92 events in 25392 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[WASM] Tick 1000 | Integrity: OK
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 38 events in 10488 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Linear memory transmitted after 2407.358398 ms
+[LM/Checkpoint] Wrote stack and shadow stack frames to stream (frame count: 4, frame offset: 548)
+[LM/Checkpoint] Frames transmitted after 0.009521 ms
+[LM/Checkpoint] Capturing the UDP state took 0.003000 ms (fd: 0, port: 0)
+[LM/Checkpoint] Initial full linear memory handover duration 734.509000 ms
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] Flushing 0 bytes of buffered membrane events...
+[LM/Checkpoint] Received 0xEOF_RECONSTRUCT, halting execution for final handover (1785771449737.559082 ms)...
+[LM/Checkpoint] Migration server completed its tasks
+[LM/Checkpoint] Initial membrane chunk transmitted after 38.262939 ms
+[LM/Checkpoint] Trying to converge membrane replay log...
+[WASM] Tick 1200 | Integrity: OK
+[LM/Checkpoint] Batched 92 events in 25392 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 124 byte (104 bytes of payload)
+[LM/Checkpoint] Batched 16 events in 4416 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 1400 | Integrity: OK
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 99 events in 27324 bytes
+[LM/Checkpoint] Batched 61 events in 16836 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 1600 | Integrity: OK
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] Batched 97 events in 26772 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 12 events in 3312 bytes
+[LM/Checkpoint] Batched 110 events in 30360 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 16 events in 4416 bytes
+[WASM] Tick 1800 | Integrity: OK
+[LM/Checkpoint] Batched 110 events in 30360 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] Batched 63 events in 17388 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 90 events in 24840 bytes
+[WASM] Tick 2000 | Integrity: OK
+[LM/Checkpoint] Batched 88 events in 24288 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 2200 | Integrity: OK
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 2400 | Integrity: OK
+[LM/Checkpoint] Batched 109 events in 30084 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 64 events in 17664 bytes
+[LM/Checkpoint] Batched 40 events in 11040 bytes
+[LM/Checkpoint] Batched 41 events in 11316 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 2600 | Integrity: OK
+[LM/Checkpoint] Batched 76 events in 20976 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 24 events in 6624 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 2800 | Integrity: OK
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 70 events in 19320 bytes
+[LM/Checkpoint] Batched 23 events in 6348 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 9 events in 2484 bytes
+[LM/Checkpoint] Batched 15 events in 4140 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 4 events in 1104 bytes
+[WASM] Tick 3000 | Integrity: OK
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 3200 | Integrity: OK
+[LM/Checkpoint] Batched 79 events in 21804 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 73 events in 20148 bytes
+[LM/Checkpoint] Batched 78 events in 21528 bytes
+[WASM] Tick 3400 | Integrity: OK
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 37 events in 10212 bytes
+[LM/Checkpoint] Batched 13 events in 3588 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 3600 | Integrity: OK
+[LM/Checkpoint] Batched 96 events in 26496 bytes
+[LM/Checkpoint] Batched 91 events in 25116 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 49 events in 13524 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[WASM] Tick 3800 | Integrity: OK
+[LM/Checkpoint] Batched 71 events in 19596 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 100 events in 27600 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 102 events in 28152 bytes
+[WASM] Tick 4000 | Integrity: OK
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 38 events in 10488 bytes
+[LM/Checkpoint] Batched 115 events in 31740 bytes
+[LM/Checkpoint] SAMPLE: Sent membrane event of size 276 byte (256 bytes of payload)
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] Batched 1 events in 124 bytes
+[LM/Checkpoint] WARNING: Forced cutover triggered. Lag is still 25417 events, but max time (20000.336670 ms) exceeded.
+[LM/Checkpoint] Migration client completed its tasks
+[LM/Checkpoint] Transmitted 386877 membrane events
+[LM/Checkpoint] Migration completed in 22457.600586 ms
+[LM/Checkpoint] Live migration completed at 1785771469755.647461 ms.
+[LM/Checkpoint] Closing migration connections...
+[LM/Checkpoint] Closed all migration connections!

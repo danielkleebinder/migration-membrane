@@ -1,0 +1,335 @@
+---
+# STEP 1: Global fact gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+
+# STEP 2: Prepare satellite nodes to allow CRIU checkpointing
+- name: Prepare Satellite Nodes
+  hosts: satellites
+  tasks:
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+        owner: pi
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration
+
+    - name: Reset log files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/iwasm.log
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/initial-runtime.log
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/initial-runtime.pid
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/host-metrics.csv
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/metrics.log
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/metrics.pid
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/network.pcap
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/tcpdump.log
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/tcpdump.pid
+
+    - name: Create receiver log file
+      ansible.builtin.file:
+        path: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/iwasm.log
+        state: touch
+        mode: "0666"
+        owner: pi
+
+    - name: Copy assets to satellites
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/iot-2026/experiments/with-membrane/recurrent-migration/{{ item | basename }}"
+        mode: "0755"
+      loop:
+        - ../benchmark.c
+        - ../benchmark.wasm
+        - ../iwasm-arm64
+
+# STEP 3: Prepare sensor node to send XR packets
+- name: Prepare Sensor Node
+  hosts: sensor
+  become: true
+  tasks:
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+        owner: pi
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration
+
+    - name: Reset log files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/results.csv
+
+    - name: Copy sender assets to sensor
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/iot-2026/experiments/with-membrane/recurrent-migration/{{ item | basename }}"
+        mode: "0755"
+        owner: pi
+      loop:
+        - ../sender.py
+        - ../../../../datasets/50mbps_su_dcf_full.csv
+
+# STEP 3.1: Configure Traffic Control on Sat1
+- name: Configure Network Emulation on Sat1
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Sat2-bound Egress Traffic
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sat1 to Sat2 Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 3.5ms 0.1ms distribution paretonormal loss 0.01%"
+
+    - name: Bind Sat2 Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.12 flowid 1:1"
+
+    # Class 1:2 -> Handles Sensor-bound Egress Traffic
+    - name: Define Class 1:2 for Sensor Return Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:2 htb rate 10gbit"
+
+    - name: Apply Sat1 to Sensor Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:2 handle 20: netem delay 2ms 1ms distribution paretonormal loss 1%"
+
+    - name: Bind Sensor Destination IP Filter to Class 1:2
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.14 flowid 1:2"
+
+# STEP 3.2: Configure Traffic Control on Sat2
+- name: Configure Network Emulation on Sat2
+  hosts: sat2
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Sat1-bound Egress Traffic
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sat2 to Sat1 Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 3.5ms 0.1ms distribution paretonormal loss 0.01%"
+
+    - name: Bind Sat1 Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.11 flowid 1:1"
+
+    # Class 1:2 -> Handles Sensor-bound Egress Traffic
+    - name: Define Class 1:2 for Sensor Return Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:2 htb rate 10gbit"
+
+    - name: Apply Sat2 to Sensor Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:2 handle 20: netem delay 2ms 1ms distribution paretonormal loss 1%"
+
+    - name: Bind Sensor Destination IP Filter to Class 1:2
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.14 flowid 1:2"
+
+# STEP 3.3: Configure Traffic Control on the Sensor Node
+- name: Configure Network Emulation on Sensor
+  hosts: sensor
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Outbound Telemetry Streams to All Satellites
+    - name: Define Class 1:1 for Satellite Targets
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sensor to Satellite Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 2ms 1ms distribution paretonormal loss 1%"
+
+    - name: Route Sat1 Ingress Targets to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.11 flowid 1:1"
+
+    - name: Route Sat2 Ingress Targets to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.12 flowid 1:1"
+
+# STEP 4: Start cgroup and packet-capture measurements on both receiver hosts
+- name: Start CPU, memory, and network measurements
+  hosts: satellites
+  become: true
+  vars:
+    experiment_dir: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration
+    runtime_cgroup: /sys/fs/cgroup/iot-recurrent
+  tasks:
+    - name: Check measurement prerequisites
+      ansible.builtin.shell: |
+        test -f /sys/fs/cgroup/cgroup.controllers
+        command -v tcpdump >/dev/null
+
+        available="$(< /sys/fs/cgroup/cgroup.controllers)"
+        for controller in cpu memory; do
+          if ! grep -qw "$controller" <<< "$available"; then
+            echo "Required cgroup v2 controller '$controller' is unavailable. Available controllers: $available" >&2
+            exit 1
+          fi
+        done
+
+        enabled="$(< /sys/fs/cgroup/cgroup.subtree_control)"
+        controllers_to_enable=""
+        for controller in cpu memory; do
+          if ! grep -qw "$controller" <<< "$enabled"; then
+            controllers_to_enable+=" +$controller"
+          fi
+        done
+        if [[ -n "$controllers_to_enable" ]]; then
+          echo "$controllers_to_enable" > /sys/fs/cgroup/cgroup.subtree_control
+        fi
+      args:
+        executable: /bin/bash
+
+    - name: Stop leftover collectors and runtimes
+      ansible.builtin.shell: |
+        for pid_file in {{ experiment_dir }}/metrics.pid {{ experiment_dir }}/tcpdump.pid; do
+          [[ -s "$pid_file" ]] && kill "$(<"$pid_file")" 2>/dev/null || true
+        done
+        pkill -2 -f '[i]wasm-arm64.*benchmark[.]wasm' 2>/dev/null || true
+        sleep 1
+      args:
+        executable: /bin/bash
+      changed_when: true
+
+    - name: Create dedicated runtime cgroup
+      ansible.builtin.shell: |
+        if [[ -d {{ runtime_cgroup }} ]]; then
+          while read -r pid; do
+            kill "$pid" 2>/dev/null || true
+          done < {{ runtime_cgroup }}/cgroup.procs
+          for _ in {1..50}; do
+            [[ ! -s {{ runtime_cgroup }}/cgroup.procs ]] && break
+            sleep 0.1
+          done
+          rmdir {{ runtime_cgroup }}
+        fi
+        mkdir {{ runtime_cgroup }}
+        for metric in cpu.stat memory.current; do
+          if [[ ! -f {{ runtime_cgroup }}/$metric ]]; then
+            echo "Missing {{ runtime_cgroup }}/$metric after enabling cgroup controllers" >&2
+            exit 1
+          fi
+        done
+      args:
+        executable: /bin/bash
+      changed_when: true
+
+    - name: Install cgroup runtime launcher
+      ansible.builtin.copy:
+        dest: "{{ experiment_dir }}/start-runtime.sh"
+        mode: "0755"
+        content: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+
+          source_host="${1:-}"
+          echo $$ > {{ runtime_cgroup }}/cgroup.procs
+          command=(
+            stdbuf -oL ./iwasm-arm64
+            --addr-pool=0.0.0.0/0
+            --migration-server=8010
+          )
+          if [[ -n "$source_host" ]]; then
+            command+=("--migrate=$source_host:8010")
+          fi
+          exec "${command[@]}" benchmark.wasm 128 >> iwasm.log 2>&1
+
+    - name: Install cgroup metrics collector
+      ansible.builtin.template:
+        src: collect-metrics.sh.j2
+        dest: "{{ experiment_dir }}/collect-metrics.sh"
+        mode: "0755"
+
+    - name: Launch measurement collector
+      ansible.builtin.shell: |
+        nohup {{ experiment_dir }}/collect-metrics.sh \
+          {{ inventory_hostname | quote }} \
+          {{ experiment_start_epoch | default(0) | quote }} \
+          > {{ experiment_dir }}/metrics.log 2>&1 &
+        echo $! > {{ experiment_dir }}/metrics.pid
+      args:
+        executable: /bin/bash
+      changed_when: true
+
+    - name: Verify measurement collector is running
+      ansible.builtin.shell: |
+        pid="$(<{{ experiment_dir }}/metrics.pid)"
+        kill -0 "$pid"
+      args:
+        executable: /bin/bash
+      changed_when: false
+
+    - name: Start outbound packet capture
+      ansible.builtin.shell: |
+        nohup tcpdump -i eth0 -Q out -n -s 128 -U \
+          -w {{ experiment_dir }}/network.pcap \
+          'port 8010 or port 8011' \
+          > {{ experiment_dir }}/tcpdump.log 2>&1 &
+        echo $! > {{ experiment_dir }}/tcpdump.pid
+      args:
+        executable: /bin/bash
+      changed_when: true
+
+# STEP 5: Start the initial receiver, then start the sender at the common time
+- name: Start initial receiver on Sat1
+  hosts: sat1
+  become: true
+  vars:
+    experiment_dir: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration
+  tasks:
+    - name: Launch receiver
+      ansible.builtin.shell: |
+        nohup ./start-runtime.sh \
+          > {{ experiment_dir }}/initial-runtime.log 2>&1 < /dev/null &
+        echo $! > {{ experiment_dir }}/initial-runtime.pid
+      args:
+        chdir: "{{ experiment_dir }}"
+        executable: /bin/bash
+      changed_when: true
+
+- name: Start sender
+  hosts: sensor
+  become: true
+  vars:
+    experiment_dir: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration
+  tasks:
+    - name: Launch sender
+      ansible.builtin.shell: |
+        start={{ experiment_start_epoch | default(0) | quote }}
+        while [[ "$start" != "0" ]] && awk -v now="$(date +%s.%N)" -v start="$start" \
+            'BEGIN { exit !(now < start) }'; do
+          sleep 0.1
+        done
+        exec {{ sender_command | default('python3 sender.py --targets 192.168.10.11 192.168.10.12 --port 5000 --trace 50mbps_su_dcf_full.csv --output results.csv') }} \
+          > sender.log 2>&1
+      args:
+        chdir: "{{ experiment_dir }}"
+        executable: /bin/bash
+      async: 86400
+      poll: 0

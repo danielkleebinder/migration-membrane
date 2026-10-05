@@ -1,0 +1,5 @@
+astropy==8.0.0
+numpy==2.4.6
+pandas==3.0.4
+poliastro==0.7.0
+poliastro==0.7.0

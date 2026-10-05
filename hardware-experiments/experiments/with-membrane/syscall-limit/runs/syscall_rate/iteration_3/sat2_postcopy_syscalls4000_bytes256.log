@@ -1,0 +1,20 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/PostCopy] Connected to migration server 192.168.10.11:8010
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] State metadata loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 7, frame offset: 1464)
+[LM/Restore] State restored
+[LM/PostCopy] Initial state reconstructed in 14.328613 ms.
+[LM/PostCopy] Restored active UDP port 0.
+[LM/PostCopy] Handoff complete. Resuming execution locally!
+[LM/Restore] State restoration complete (1785702571300.710205 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785702571300.762451 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x5555a38130b0 cur_frame=0x5555a3818320 module_inst=0x5555a3811990 function=0x5555a3812300 prev_frame=0x5555a3818214 ip=0x7fff6ed7ec40 (offset=14, is_import=0) 1785702571300.771240 ms
+[LM/Resume] New function array base=0x5555a3811cd0 count=93
+[LM/Resume] Took 0.007000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785702571300.778076)
+[LM/Checkpoint] Server waiting for connection on port 8010...
+[WASM] Tick 1000 | Integrity: OK
+[LM/Checkpoint] Fatal: Source disconnected while fetching page 1547

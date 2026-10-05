@@ -1,0 +1,101 @@
+---
+# STEP 1: Global fact gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+
+# STEP 2: Prepare satellite nodes to allow CRIU checkpointing
+- name: Prepare Satellite Nodes
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Create high-performance ramdisk mount point
+      ansible.builtin.file:
+        path: /mnt/ramdisk
+        state: directory
+        mode: "0777"
+
+    # CRITICAL: Ensure 'size' is large enough to hold your maximum 10GB disk checkpoint
+    - name: Mount volatile ramdisk storage layer
+      ansible.posix.mount:
+        path: /mnt/ramdisk
+        src: tmpfs
+        fstype: tmpfs
+        opts: "size=12G,mode=0777"
+        state: mounted
+
+    - name: Verify experimental features are enabled in Docker
+      ansible.builtin.copy:
+        dest: /etc/docker/daemon.json
+        content: |
+          {
+            "experimental": true
+          }
+        mode: "0644"
+      register: docker_config
+
+    - name: Restart Docker if config changed
+      ansible.builtin.systemd:
+        name: docker
+        state: restarted
+      when: docker_config.changed
+
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+      loop:
+        - /home/pi/container-migration
+        - /mnt/ramdisk/container-migration
+        - /mnt/ramdisk/container-migration/checkpoints
+
+    - name: Stop and clean any previous containers
+      ansible.builtin.command: docker rm -f loadgen
+      failed_when: false
+
+# STEP 3: Configure Traffic Control on Both Satellites
+- name: Configure Network Emulation
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 4ms 1ms distribution normal loss 0.1%"
+
+    - name: Bind Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.{{ '12' if inventory_hostname == 'sat1' else '11' }} flowid 1:1"
+
+# STEP 4: Build image on sat1 and sync to sat2
+- name: Build Loadgen Image
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Copy Dockerfile to sat1
+      ansible.builtin.copy:
+        src: Dockerfile
+        dest: /home/pi/container-migration/Dockerfile
+        mode: "0644"
+
+    - name: Build image on sat1
+      community.docker.docker_image:
+        name: lookbusy-loadgen
+        tag: latest
+        source: build
+        build:
+          path: /home/pi/container-migration
+        state: present
+
+    - name: Stream container image directly to sat2
+      ansible.builtin.shell: |
+        docker save lookbusy-loadgen:latest | ssh -o StrictHostKeyChecking=no root@sat2 "docker load"

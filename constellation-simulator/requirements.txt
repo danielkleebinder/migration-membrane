@@ -1,0 +1,6 @@
+panda3D
+networkx
+skyfield
+numpy
+pandas
+astropy

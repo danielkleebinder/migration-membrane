@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.env
+.venv
+env/
+venv/
+.mypy_cache/
+cache/
+*.sqlite
+*.swp
+traces.csv
+experiment-results/

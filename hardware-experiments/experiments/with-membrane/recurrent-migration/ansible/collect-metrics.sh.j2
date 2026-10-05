@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+export LC_ALL=C
+set -u
+
+host="$1"
+start_epoch="$2"
+output="{{ experiment_dir }}/host-metrics.csv"
+cgroup="{{ runtime_cgroup }}"
+
+warn() {
+  printf '[%s] [metrics] %s\n' "$(date --iso-8601=seconds)" "$*" >&2
+}
+
+read_clock() {
+  local epoch_nanoseconds seconds nanoseconds
+  epoch_nanoseconds="$(date +%s%N)"
+  nanoseconds="${epoch_nanoseconds: -9}"
+  {% raw %}
+  seconds="${epoch_nanoseconds:0:${#epoch_nanoseconds}-9}"
+  {% endraw %}
+  clock_seconds="$seconds.$nanoseconds"
+  clock_milliseconds="$seconds${nanoseconds:0:3}.${nanoseconds:3:6}"
+}
+
+if awk -v start="$start_epoch" 'BEGIN { exit !(start <= 0) }'; then
+  read_clock
+  start_epoch="$clock_seconds"
+fi
+while awk -v now="$(date +%s.%N)" -v start="$start_epoch" \
+    'BEGIN { exit !(now < start) }'; do
+  sleep 0.1
+done
+
+read_cgroup_values() {
+  if [[ ! -r "$cgroup/cpu.stat" || ! -r "$cgroup/memory.current" ]]; then
+    warn "cgroup files are temporarily unavailable"
+    return 1
+  fi
+
+  usage="$(awk '$1 == "usage_usec" { print $2; exit }' "$cgroup/cpu.stat" 2>/dev/null)"
+  memory="$(<"$cgroup/memory.current")"
+  peak="$memory"
+  if [[ -r "$cgroup/memory.peak" ]]; then
+    peak="$(<"$cgroup/memory.peak")"
+  fi
+
+  if [[ ! "$usage" =~ ^[0-9]+$ || ! "$memory" =~ ^[0-9]+$ || ! "$peak" =~ ^[0-9]+$ ]]; then
+    warn "invalid cgroup values: usage='$usage' memory='$memory' peak='$peak'"
+    return 1
+  fi
+  return 0
+}
+
+printf 'TimeS,TimestampMs,Host,CpuCores,MemoryCurrentBytes,MemoryPeakBytes\n' > "$output"
+read_clock
+previous_time="$clock_seconds"
+timestamp_ms="$clock_milliseconds"
+while ! read_cgroup_values; do
+  sleep 0.2
+done
+previous_usage="$usage"
+
+initial_elapsed="$(awk -v now="$previous_time" -v start="$start_epoch" \
+  'BEGIN { printf "%.6f", now - start }')"
+printf '%s,%s,%s,0.000000,%s,%s\n' \
+  "$initial_elapsed" "$timestamp_ms" "$host" "$memory" "$peak" >> "$output"
+
+while true; do
+  sleep 1
+  read_clock
+  now="$clock_seconds"
+  timestamp_ms="$clock_milliseconds"
+  if ! read_cgroup_values; then
+    continue
+  fi
+
+  elapsed="$(awk -v now="$now" -v start="$start_epoch" \
+    'BEGIN { printf "%.6f", now - start }')"
+  cpu="$(awk -v now="$now" -v previous="$previous_time" \
+    -v current="$usage" -v old="$previous_usage" \
+    'BEGIN {
+      delta = now - previous
+      cpu = delta > 0 ? (current - old) / 1000000 / delta : 0
+      printf "%.6f", cpu
+    }')"
+  printf '%s,%s,%s,%s,%s,%s\n' \
+    "$elapsed" "$timestamp_ms" "$host" "$cpu" "$memory" "$peak" \
+    >> "$output"
+  previous_time="$now"
+  previous_usage="$usage"
+done

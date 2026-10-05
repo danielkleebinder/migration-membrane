@@ -1,0 +1,31 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] Membrane channel connected to 192.168.10.11:8011
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 7, frame offset: 2888)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785690955761.724854 ms).
+[LM/Restore] Enter membrane replay mode (1785690955761.748535 ms)...
+[LM/Checkpoint] Migration server completed its tasks (1785690955768.722656 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785690955768.730957 ms)
+[LM/Restore] State restoration complete (1785690955768.748535 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785690955768.823486 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x55558096f1c0 cur_frame=0x5555809749c0 module_inst=0x55558096da80 function=0x55558096e400 prev_frame=0x5555809748b4 ip=0x7ffece4331f8 (offset=14, is_import=0) 1785690955768.833008 ms
+[LM/Resume] New function array base=0x55558096def0 count=88
+[LM/Resume] Took 0.007000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785690955768.839844)
+[LM] Server waiting for connection on port 8010...
+[LM/Restore] Closed side sock fd 5
+[LM/Restore] Live migration restored at 1785690955811.688721 ms
+[WASM] Iteration 800 | Dirtied 0.64 MB @ offset 162 MB (Integrity: OK)
+[WASM] Iteration 900 | Dirtied 0.64 MB @ offset 226 MB (Integrity: OK)
+[WASM] Iteration 1000 | Dirtied 0.64 MB @ offset 290 MB (Integrity: OK)
+[WASM] Iteration 1100 | Dirtied 0.64 MB @ offset 5 MB (Integrity: OK)
+[WASM] Iteration 1200 | Dirtied 0.64 MB @ offset 69 MB (Integrity: OK)
+[WASM] Iteration 1300 | Dirtied 0.64 MB @ offset 133 MB (Integrity: OK)
+[WASM] Iteration 1400 | Dirtied 0.64 MB @ offset 197 MB (Integrity: OK)
+[WASM] Iteration 1500 | Dirtied 0.64 MB @ offset 261 MB (Integrity: OK)

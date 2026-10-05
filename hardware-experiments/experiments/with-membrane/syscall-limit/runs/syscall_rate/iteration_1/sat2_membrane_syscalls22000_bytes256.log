@@ -1,0 +1,37 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] Membrane channel connected to 192.168.10.11:8011
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 7, frame offset: 1464)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785699079315.980225 ms).
+[LM/Restore] Enter membrane replay mode (1785699079316.020264 ms)...
+[LM/Checkpoint] Migration server completed its tasks (1785699079323.081543 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785699079323.094238 ms)
+[LM/Restore] State restoration complete (1785699079323.113037 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785699079323.192627 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x55561d2370b0 cur_frame=0x55561d23c320 module_inst=0x55561d235990 function=0x55561d236300 prev_frame=0x55561d23c214 ip=0x7fff57d7ec40 (offset=14, is_import=0) 1785699079323.204102 ms
+[LM/Resume] New function array base=0x55561d235cd0 count=93
+[LM/Resume] Took 0.007000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785699079323.211426)
+[LM] Server waiting for connection on port 8010...
+[LM/Restore] Closed side sock fd 5
+[LM/Restore] Read 370424 membrane events
+[LM/Restore] Live migration restored at 1785699099341.889893 ms
+[WASM] Tick 4200 | Integrity: OK
+[WASM] Tick 4400 | Integrity: OK
+[WASM] Tick 4600 | Integrity: OK
+[WASM] Tick 4800 | Integrity: OK
+[WASM] Tick 5000 | Integrity: OK
+[WASM] Tick 5200 | Integrity: OK
+[WASM] Tick 5400 | Integrity: OK
+[WASM] Tick 5600 | Integrity: OK
+[WASM] Tick 5800 | Integrity: OK
+[WASM] Tick 6000 | Integrity: OK
+[WASM] Tick 6200 | Integrity: OK
+[WASM] Tick 6400 | Integrity: OK
+[WASM] Tick 6600 | Integrity: OK

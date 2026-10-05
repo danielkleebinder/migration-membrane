@@ -1,0 +1,35 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785686445685.758301 ms).
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 150 MB | Rate: 64 MB/s | Step: 10 ms (0.64 MB/iter)
+[WASM] Writing initial test patterns to all 150 MB of pages...
+[WASM] Memory initialized. Starting loop with 64 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.64 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.64 MB @ offset 63 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.64 MB @ offset 127 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.64 MB @ offset 42 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.64 MB @ offset 106 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 0.64 MB @ offset 21 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785686450912.181396 ms)...
+[LM/Checkpoint] Sync all to frame at opcode=10 (next=41)
+CHECK: frame 0x55561a8809c0, frame->ip 65
+[LM/Checkpoint] Memory snapshot captured after 9.526855 ms
+[LM/Checkpoint] Phase 1.1: Sending state metadata...
+[LM/Checkpoint] Memory metadata transmitted after 0.035645 ms
+[LM/Checkpoint] Phase 1.2: Sending initial bulk memory (150 MB)...
+[LM/Checkpoint] Main interpreter thread halted for 0.043000 ms
+[WASM] Iteration 600 | Dirtied 0.64 MB @ offset 85 MB (Integrity: OK)
+[LM/Checkpoint] Linear memory transmitted after 1363.729980 ms
+[LM/Checkpoint] Wrote stack and shadow stack frames to stream (frame count: 7, frame offset: 2888)
+[LM/Checkpoint] Frames transmitted after 0.022461 ms
+[LM/Checkpoint] Capturing the UDP state took 0.002000 ms (fd: 0, port: 0)
+[LM/Checkpoint] Initial full linear memory handover duration 64.823000 ms
+[LM/Checkpoint] Received 0xEOF_RECONSTRUCT, halting execution for final handover (1785686452309.401367 ms)...
+[LM/Checkpoint] Migration server completed its tasks
+[LM/Checkpoint] Initial membrane chunk transmitted after 31.029053 ms
+[LM/Checkpoint] Migration client completed its tasks
+[LM/Checkpoint] Migration completed in 1414.470703 ms
+[LM/Checkpoint] Live migration completed at 1785686450912.241699 ms.
+[LM/Checkpoint] Program halts at 1785686452326.683594 ms.
+[LM/Checkpoint] Closing migration connections...
+[LM/Checkpoint] Closed all migration connections!

@@ -1,0 +1,34 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785771090874.858643 ms).
+[LM] Server waiting for connection on port 8010...
+[WASM] Config: 256 MB | 64.00 MB/s | 19000 Syscalls/s (Type: 2, Modifying: 256 bytes)
+[WASM] Initializing physical memory backing...
+[WASM] Entering execution loop (using bypass)...
+[WASM] Tick 200 | Integrity: OK
+[WASM] Tick 400 | Integrity: OK
+[WASM] Tick 600 | Integrity: OK
+[WASM] Tick 800 | Integrity: OK
+[LM] Client connected. Migration is initiated (1785771097139.566406 ms)...
+[LM/Checkpoint] Sync all to frame at opcode=c7 (next=41)
+CHECK: frame 0x55560c99ff8c, frame->ip 65
+[LM/Checkpoint] Memory snapshot captured after 1.103027 ms
+[LM/Checkpoint] Phase 1.1: Sending state metadata...
+[LM/Checkpoint] Memory metadata transmitted after 0.025635 ms
+[LM/Checkpoint] Phase 1.2: Sending initial bulk memory (256 MB)...
+[LM/Checkpoint] Main interpreter thread halted for 1.020000 ms
+[WASM] Tick 1000 | Integrity: OK
+[WASM] Tick 1200 | Integrity: OK
+[LM/Checkpoint] Linear memory transmitted after 2304.320068 ms
+[LM/Checkpoint] Wrote stack and shadow stack frames to stream (frame count: 4, frame offset: 548)
+[LM/Checkpoint] Frames transmitted after 0.024414 ms
+[LM/Checkpoint] Capturing the UDP state took 0.002000 ms (fd: 0, port: 0)
+[LM/Checkpoint] Initial full linear memory handover duration 681.890000 ms
+[LM/Checkpoint] Received 0xEOF_RECONSTRUCT, halting execution for final handover (1785771099476.169678 ms)...
+[LM/Checkpoint] Migration server completed its tasks
+[LM/Checkpoint] Initial membrane chunk transmitted after 37.967773 ms
+[LM/Checkpoint] Migration client completed its tasks
+[LM/Checkpoint] Migration completed in 2353.565674 ms
+[LM/Checkpoint] Live migration completed at 1785771097139.632080 ms.
+[LM/Checkpoint] Program halts at 1785771099493.170410 ms.
+[LM/Checkpoint] Closing migration connections...
+[LM/Checkpoint] Closed all migration connections!

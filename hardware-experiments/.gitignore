@@ -1,0 +1,10 @@
+.venv
+.idea
+bin
+datasets
+etc
+include
+lib
+lib64
+share
+venv

@@ -1,0 +1,33 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 256 MB | Rate: 20 MB/s | Step: 10 ms (0.20 MB/iter)
+[WASM] Writing initial test patterns to all 256 MB of pages...
+[WASM] Memory initialized. Starting loop with 20 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.20 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.20 MB @ offset 19 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.20 MB @ offset 39 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.20 MB @ offset 59 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.20 MB @ offset 79 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 0.20 MB @ offset 99 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785172950485.720459 ms)...
+[LM] Phase 1: Sending initial bulk memory (256 MB)...
+[WASM] Iteration 600 | Dirtied 0.20 MB @ offset 119 MB (Integrity: OK)
+[WASM] Iteration 700 | Dirtied 0.20 MB @ offset 139 MB (Integrity: OK)
+[LM] Initial pre-copy of bulk memory completed. Took 2317.876221 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[LM] Number of dirty cards transmitted: 94214
+[LM] Pre-copy Iteration 1: Sent 48237568 bytes.
+[LM] Number of dirty cards transmitted: 16389
+[LM] Pre-copy Iteration 2: Sent 8391168 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 473.259766 ms
+[LM] Bulk + Precopy duration 250.335000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 4101
+[LM] Send final dirty pages took 10.752000 ms
+[LM] Checkpoint dirty state took 0.082000 ms
+[LM/Checkpoint] Live migration completed at 1785172953324.314453 ms. Migration took 2838.594238 ms
+[LM/Checkpoint] Took 10.977000 ms to checkpoint application

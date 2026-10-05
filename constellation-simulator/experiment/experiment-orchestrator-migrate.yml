@@ -1,0 +1,22 @@
+---
+- name: Perform Migration
+  hosts: localhost
+  gather_facts: no
+  vars:
+    source_ip: "{{ source | default('192.168.10.11') }}"
+    target_ip: "{{ target | default('192.168.10.12') }}"
+
+  tasks:
+    - name: Dynamically add target IP to runtime inventory
+      ansible.builtin.add_host:
+          name: dynamic_target
+          ansible_host: "{{ target_ip }}"
+          ansible_user: pi
+
+    - name: Trigger migration on the target node
+      delegate_to: dynamic_target
+      ansible.builtin.shell: "stdbuf -oL ./iwasm-arm64 --addr-pool=0.0.0.0/0 --migrate={{ source_ip }}:8010 --migration-server=8010 benchmark.wasm > /home/pi/iot-2026/experiments/with-membrane/macro/iwasm.log 2>&1"
+      args:
+        chdir: /home/pi/iot-2026/experiments/with-membrane/macro
+      async: 600
+      poll: 0

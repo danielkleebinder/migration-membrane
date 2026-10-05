@@ -1,0 +1,209 @@
+---
+# STEP 1: Global Fact Gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+  become: "{{ true if ansible_user != 'root' else false }}"
+
+# STEP 2: Global Cluster Reset, Routing configurations, and Hostname Mapping
+- name: Reset Network Configurations and Map Hostnames
+  hosts: all
+  become: "{{ true if ansible_user != 'root' else false }}"
+  gather_facts: false
+
+  tasks:
+    - name: Disable cloud-init etc_hosts management
+      ansible.builtin.replace:
+        path: /etc/cloud/cloud.cfg
+        regexp: 'manage_etc_hosts:\s*[Tt]rue'
+        replace: 'manage_etc_hosts: false'
+      failed_when: false
+
+    - name: Update local /etc/hosts file
+      ansible.builtin.lineinfile:
+        path: /etc/hosts
+        regexp: ".*\\s{{ item }}$"
+        line: "{{ hostvars[item]['ansible_facts']['eth0']['ipv4']['address'] }} {{ item }}"
+        state: present
+      loop: "{{ groups['all'] }}"
+      when:
+        - hostvars[item] is defined
+        - hostvars[item]['ansible_facts'] is defined
+        - hostvars[item]['ansible_facts']['eth0'] is defined
+
+    - name: Enable kernel-level IPv4 forwarding
+      ansible.posix.sysctl:
+        name: net.ipv4.ip_forward
+        value: '1'
+        sysctl_set: true
+        state: present
+        reload: true
+
+    - name: Set loose reverse path filtering
+      ansible.posix.sysctl:
+        name: net.ipv4.conf.all.rp_filter
+        value: '2'
+        sysctl_set: true
+        state: present
+        reload: true
+
+    - name: Global Reset - Clear all custom tc rules
+      ansible.builtin.shell: "tc qdisc del dev eth0 root"
+      failed_when: false
+
+    - name: Global Reset - Flush custom nftables NAT configurations
+      ansible.builtin.shell: "nft flush table ip nat"
+      failed_when: false
+
+    - name: Global Reset - Clear custom reverse host routes
+      ansible.builtin.shell: "ip route del {{ hostvars['sensor']['ansible_facts']['eth0']['ipv4']['address'] }}/32"
+      failed_when: false
+
+    - name: Global Reset - Ensure any lingering old receiver processes are killed
+      ansible.builtin.shell: "pkill -f receiver.py"
+      failed_when: false
+
+# STEP 3: Configure Static nftables Port Forwarding and Reverse Paths
+# STEP 3: Configure Static nftables Port Forwarding
+- name: Configure Static Multi-Hop Port Routing via nftables
+  hosts: satellites
+  become: "{{ true if ansible_user != 'root' else false }}"
+  gather_facts: false
+
+  vars:
+    sensor_ip: "{{ hostvars['sensor']['ansible_facts']['eth0']['ipv4']['address'] }}"
+    sat2_ip: "{{ hostvars['sat2']['ansible_facts']['eth0']['ipv4']['address'] }}"
+    sat1_ip: "{{ hostvars['sat1']['ansible_facts']['eth0']['ipv4']['address'] }}"
+
+  tasks:
+    - name: Initialize nftables NAT structure
+      ansible.builtin.shell: |
+        nft add table ip nat
+        nft add chain ip nat prerouting { type nat hook prerouting priority dstnat \; }
+        nft add chain ip nat postrouting { type nat hook postrouting priority srcnat \; }
+      when: inventory_hostname in ['sat2', 'sat3']
+
+    - name: "[sat3] 2-Hop Relay: Forward port 8080 towards sat2"
+      ansible.builtin.shell: |
+        nft add rule ip nat prerouting ip saddr {{ sensor_ip }} tcp dport 8080 counter dnat to {{ sat2_ip }}:8080
+        nft add rule ip nat postrouting ip saddr {{ sensor_ip }} tcp dport 8080 counter masquerade
+      when: inventory_hostname == "sat3"
+
+    - name: "[sat2] 1-Hop Relay: Forward port 8080 towards sat1"
+      ansible.builtin.shell: |
+        nft add rule ip nat prerouting tcp dport 8080 counter dnat to {{ sat1_ip }}:8080
+        nft add rule ip nat postrouting tcp dport 8080 counter masquerade
+      when: inventory_hostname == "sat2"
+
+# STEP 4: Network Emulation for Satellites (ISL Only)
+- name: Configure Satellite Network Emulation
+  hosts: satellites
+  become: "{{ true if ansible_user != 'root' else false }}"
+  gather_facts: false
+
+  tasks:
+    - name: Add root priority qdisc
+      ansible.builtin.shell: "tc qdisc add dev eth0 root handle 1: prio"
+      changed_when: true
+
+    - name: Configure netem delay and loss strictly on parent 1:1
+      ansible.builtin.shell: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 4ms 1ms distribution paretonormal loss 0.01%"
+      changed_when: true
+
+    - name: Add traffic control filters for Inter-Satellite Links (ISL)
+      ansible.builtin.shell: >
+        tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 
+        match ip dst {{ hostvars[item]['ansible_facts']['eth0']['ipv4']['address'] }} flowid 1:1
+      loop: "{{ groups['satellites'] }}"
+      when:
+        - item != inventory_hostname
+        - hostvars[item]['ansible_facts']['eth0']['ipv4']['address'] is defined
+      changed_when: true
+
+# STEP 5: Deploy and Start Receiver on sat1
+- name: Initialize Experiment Receiver
+  hosts: satellites
+  become: "{{ true if ansible_user != 'root' else false }}"
+  gather_facts: false
+
+  tasks:
+    - name: Ensure destination directory exists on sat1
+      ansible.builtin.file:
+        path: /home/pi/routing-latency
+        state: directory
+        mode: '0755'
+      when: inventory_hostname == "sat1"
+
+    - name: Copy receiver.py to sat1
+      ansible.builtin.copy:
+        src: receiver.py
+        dest: /home/pi/routing-latency/receiver.py
+        mode: '0755'
+      when: inventory_hostname == "sat1"
+
+    - name: Run receiver.py asynchronously in the background
+      ansible.builtin.command: python3 /home/pi/routing-latency/receiver.py
+      args:
+        chdir: /home/pi/routing-latency/
+      async: 1800
+      poll: 0
+      when: inventory_hostname == "sat1"
+
+# STEP 6: Deploy, Execute Simulation and Retrieve Results
+- name: Deploy Experiment Artifacts and Run Simulation
+  hosts: sensors
+  gather_facts: false
+  become: "{{ true if ansible_user != 'root' else false }}"
+
+  tasks:
+    - name: Ensure destination directory exists
+      ansible.builtin.file:
+        path: /home/pi/routing-latency
+        state: directory
+        mode: '0755'
+
+    - name: Copy requirements.txt to the sensor node
+      ansible.builtin.copy:
+        src: requirements.txt
+        dest: /home/pi/routing-latency/requirements.txt
+
+    - name: Install Python dependencies inside a virtual environment
+      ansible.builtin.pip:
+        requirements: /home/pi/routing-latency/requirements.txt
+        virtualenv: /home/pi/routing-latency/venv
+        virtualenv_command: python3 -m venv
+
+    - name: Copy simulation to the sensor node
+      ansible.builtin.copy:
+        src: simulation_orbital_mechanics.py
+        dest: /home/pi/routing-latency/simulation_orbital_mechanics.py
+        mode: '0755'
+
+    - name: Run the simulation script (Blocks until finished)
+      ansible.builtin.command: /home/pi/routing-latency/venv/bin/python3 /home/pi/routing-latency/simulation_orbital_mechanics.py
+      args:
+        chdir: /home/pi/routing-latency/
+      register: simulation_run
+      changed_when: true
+
+    - name: Print simulation logs
+      ansible.builtin.debug:
+        var: simulation_run.stdout_lines
+
+    - name: Collect results.csv back to the local host machine
+      ansible.builtin.fetch:
+        src: /home/pi/routing-latency/results_routing_latency.csv
+        dest: ./results_routing_latency.csv
+        flat: true
+
+# STEP 7: Teardown Experiment Infrastructure
+- name: Teardown Background Experiment Processes
+  hosts: satellites
+  become: "{{ true if ansible_user != 'root' else false }}"
+  gather_facts: false
+
+  tasks:
+    - name: Cleanly terminate receiver.py script on sat1
+      ansible.builtin.shell: "pkill -f receiver.py"
+      when: inventory_hostname == "sat1"
+      failed_when: false

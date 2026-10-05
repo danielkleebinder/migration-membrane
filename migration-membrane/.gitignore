@@ -1,0 +1,86 @@
+# Reconstructed WAMR source trees
+/runtime/
+/wasm-micro-runtime-vsr/
+
+# CMake and native build output
+build/
+build-*/
+cmake-build-*/
+**/build/
+**/build-*/
+**/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+Testing/
+
+# Compiled objects, libraries, and executables
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+/iwasm
+/wamrc
+
+# Generated WebAssembly artifacts
+*.wasm
+*.aot
+
+# Generated experiment data and runtime state
+samples/**/*.csv
+samples/**/results/
+results/
+evaluation-results/
+*.dump
+state.dump
+*.log
+core
+core.*
+
+# Coverage and profiling output
+*.gcda
+*.gcno
+*.gcov
+coverage/
+gmon.out
+perf.data
+perf.data.*
+
+# Python-generated files and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Editors and development tools
+.idea/
+.vscode/
+.cache/
+*.swp
+*.swo
+*~
+.aider*
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Patch conflict and temporary files
+*.orig
+*.rej
+*.tmp
+*.temp

@@ -1,0 +1,103 @@
+---
+# STEP 1: Global fact gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+
+- name: Prepare local results directory
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create results directory
+      ansible.builtin.file:
+        path: "{{ results_dir | default(playbook_dir ~ '/../results') }}"
+        state: directory
+        mode: "0755"
+
+# STEP 11: Cleanup Sensor
+- name: Cleanup sensor and retrieve results
+  hosts: sensor
+  become: true
+  tasks:
+    - name: Kill sender script
+      ansible.builtin.command: >
+        pkill -2 -f sender.py
+      ignore_errors: true
+
+    - name: Wait for Python script to finish draining and writing CSV
+      ansible.builtin.pause:
+        seconds: 3
+
+    - name: Collect results back to the local host machine
+      ansible.builtin.fetch:
+        src: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/results.csv
+        dest: "{{ results_dir | default(playbook_dir ~ '/../results') }}/results.csv"
+        flat: true
+
+# STEP 12: Cleanup satellites
+- name: Cleanup satellites
+  hosts: satellites
+  become: true
+  vars:
+    experiment_dir: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration
+  tasks:
+    - name: Stop measurement collectors and wait for file flush
+      ansible.builtin.shell: |
+        if [[ -s {{ experiment_dir }}/metrics.pid ]]; then
+          metrics_pid="$(<{{ experiment_dir }}/metrics.pid)"
+          kill -15 "$metrics_pid" 2>/dev/null || true
+          for _ in {1..50}; do
+            kill -0 "$metrics_pid" 2>/dev/null || break
+            sleep 0.1
+          done
+        fi
+        if [[ -s {{ experiment_dir }}/tcpdump.pid ]]; then
+          tcpdump_pid="$(<{{ experiment_dir }}/tcpdump.pid)"
+          kill -2 "$tcpdump_pid" 2>/dev/null || true
+          for _ in {1..50}; do
+            kill -0 "$tcpdump_pid" 2>/dev/null || break
+            sleep 0.1
+          done
+        fi
+      args:
+        executable: /bin/bash
+      changed_when: true
+
+    - name: Kill receiver script
+      ansible.builtin.command: >
+        pkill -2 -f benchmark.wasm
+      ignore_errors: true
+
+    - name: Collect results back to the local host machine
+      ansible.builtin.fetch:
+        src: /home/pi/iot-2026/experiments/with-membrane/recurrent-migration/iwasm.log
+        dest: "{{ results_dir | default(playbook_dir ~ '/../results') }}/{{ inventory_hostname }}_iwasm.log"
+        flat: true
+
+    - name: Collect cgroup CPU and memory samples
+      ansible.builtin.fetch:
+        src: "{{ experiment_dir }}/host-metrics.csv"
+        dest: "{{ results_dir | default(playbook_dir ~ '/../results') }}/{{ inventory_hostname }}_host-metrics.csv"
+        flat: true
+
+    - name: Collect measurement diagnostics
+      ansible.builtin.fetch:
+        src: "{{ experiment_dir }}/metrics.log"
+        dest: "{{ results_dir | default(playbook_dir ~ '/../results') }}/{{ inventory_hostname }}_metrics.log"
+        flat: true
+
+    - name: Collect outbound packet capture
+      ansible.builtin.fetch:
+        src: "{{ experiment_dir }}/network.pcap"
+        dest: "{{ results_dir | default(playbook_dir ~ '/../results') }}/{{ inventory_hostname }}_network.pcap"
+        flat: true
+
+    - name: Collect packet capture diagnostics
+      ansible.builtin.fetch:
+        src: "{{ experiment_dir }}/tcpdump.log"
+        dest: "{{ results_dir | default(playbook_dir ~ '/../results') }}/{{ inventory_hostname }}_tcpdump.log"
+        flat: true
+
+    - name: Remove runtime cgroup
+      ansible.builtin.command: rmdir /sys/fs/cgroup/iot-recurrent
+      ignore_errors: true

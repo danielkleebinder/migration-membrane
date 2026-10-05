@@ -1,0 +1,30 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Pre-copy complete. Proceeding to final handover.
+Frame - IP: 821, function_index: 13, func: 0x5555cf529f40
+  frame->ip: 0x7ffef779c689
+END
+
+Frame - IP: 114, function_index: 25, func: 0x5555cf52a180
+  frame->ip: 0x7ffef779eb4a
+END
+
+Frame - IP: 52, function_index: 12, func: 0x5555cf529f10
+  frame->ip: 0x7ffef779c329
+END
+
+[LM Client] Migration successfully completed.
+[LM] State received and restored.
+[LM] Starting migration server on port 8010 in background...
+[LM] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x5555cf52b0b0 cur_frame=0x5555cf52bf6c module_inst=0x5555cf529990 function=0x5555cf529f40 prev_frame=0x5555cf52be4c ip=0x7ffef779c689 (offset=821)
+[LM/Resume] new function array base=0x5555cf529cd0 count=93
+[LM/Resume] Took 0.006000 ms to restore application
+[LM/Restore] Live migration restored at 1785699661034.748779 ms
+[LM] Server waiting for connection on port 8010...
+[WASM] Tick 1600 | Integrity: OK
+[WASM] Tick 1800 | Integrity: OK
+[WASM] Tick 2000 | Integrity: OK

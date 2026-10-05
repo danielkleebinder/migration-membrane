@@ -1,0 +1,41 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] Membrane channel connected to 192.168.10.11:8011
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 4, frame offset: 548)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785698755242.545410 ms).
+[LM/Restore] Enter membrane replay mode (1785698755242.571533 ms)...
+[LM/Checkpoint] Migration server completed its tasks (1785698755249.853516 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785698755249.862061 ms)
+[LM/Restore] State restoration complete (1785698755249.879395 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785698755249.951416 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x55566a97f0b0 cur_frame=0x55566a983f8c module_inst=0x55566a97d990 function=0x55566a97df40 prev_frame=0x55566a983e6c ip=0x7fff7afcc677 (offset=803, is_import=0) 1785698755249.962891 ms
+[LM/Resume] New function array base=0x55566a97dcd0 count=93
+[LM/Resume] Took 0.007000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785698755249.970459)
+[LM] Server waiting for connection on port 8010...
+[LM/Restore] Closed side sock fd 5
+[LM/Restore] Read 165129 membrane events
+[LM/Restore] Live migration restored at 1785698764363.298828 ms
+[WASM] Tick 2800 | Integrity: OK
+[WASM] Tick 3000 | Integrity: OK
+[WASM] Tick 3200 | Integrity: OK
+[WASM] Tick 3400 | Integrity: OK
+[WASM] Tick 3600 | Integrity: OK
+[WASM] Tick 3800 | Integrity: OK
+[WASM] Tick 4000 | Integrity: OK
+[WASM] Tick 4200 | Integrity: OK
+[WASM] Tick 4400 | Integrity: OK
+[WASM] Tick 4600 | Integrity: OK
+[WASM] Tick 4800 | Integrity: OK
+[WASM] Tick 5000 | Integrity: OK
+[WASM] Tick 5200 | Integrity: OK
+[WASM] Tick 5400 | Integrity: OK
+[WASM] Tick 5600 | Integrity: OK
+[WASM] Tick 5800 | Integrity: OK
+[WASM] Tick 6000 | Integrity: OK

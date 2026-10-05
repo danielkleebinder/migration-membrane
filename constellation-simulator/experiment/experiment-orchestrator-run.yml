@@ -1,0 +1,219 @@
+---
+# STEP 1: Global fact gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+
+# STEP 2: Prepare satellite nodes
+- name: Prepare Satellite Nodes
+  hosts: satellites
+  tasks:
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+        owner: pi
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/macro
+
+    - name: Reset log files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/macro/iwasm.log
+        - /home/pi/iot-2026/experiments/with-membrane/macro/migration_traffic.pcap
+        - /home/pi/iot-2026/experiments/with-membrane/macro/app_traffic.pcap
+        - /home/pi/iot-2026/experiments/with-membrane/macro/cpu_ram_metrics.log
+
+    - name: Copy assets to satellites
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/iot-2026/experiments/with-membrane/macro/{{ item | basename }}"
+        mode: "0755"
+        owner: pi
+      loop:
+        - benchmark.wasm
+        - iwasm-arm64
+
+# STEP 3: Prepare sensor node to send XR packets
+- name: Prepare Sensor Node
+  hosts: sensor
+  tasks:
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+        owner: pi
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/macro
+
+    - name: Reset sensor log files
+      ansible.builtin.file:
+        path: /home/pi/iot-2026/experiments/with-membrane/macro/sensor_app_traffic.pcap
+        state: absent
+
+    - name: Reset log files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/macro/results.csv
+        - /home/pi/iot-2026/experiments/with-membrane/macro/sender.log
+        - /home/pi/iot-2026/experiments/with-membrane/macro/sensor_app_traffic.pcap
+
+    - name: Copy sender assets to sensor
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/iot-2026/experiments/with-membrane/macro/{{ item | basename }}"
+        mode: "0755"
+        owner: pi
+      loop:
+        - sender.py
+        - 50mbps_su_dcf_full.csv
+
+
+# =========================================================================
+# NEW STEP 4: Start Network & Resource Monitoring on Satellites
+# =========================================================================
+#- name: Start Monitoring on Satellites
+#  hosts: satellites
+#  become: true
+#  tasks:
+#    - name: Start tcpdump for migration traffic (TCP 8010 & 8011)
+#      ansible.builtin.shell: >
+#        nohup tcpdump -i eth0 'tcp port 8010 or tcp port 8011'
+#        -w /home/pi/iot-2026/experiments/with-membrane/macro/migration_traffic.pcap > /dev/null 2>&1 &
+#      async: 600
+#      poll: 0
+#
+#    - name: Start tcpdump for application traffic (UDP 5000)
+#      ansible.builtin.shell: >
+#        nohup tcpdump -i eth0 udp port 5000
+#        -w /home/pi/iot-2026/experiments/with-membrane/macro/app_traffic.pcap > /dev/null 2>&1 &
+#      async: 600
+#      poll: 0
+#
+#    - name: Start pidstat for CPU and RAM monitoring (Tracks any 'iwasm-arm64' process)
+#      ansible.builtin.shell: >
+#        nohup pidstat -C iwasm-arm64 -u -r 1
+#        > /home/pi/iot-2026/experiments/with-membrane/macro/cpu_ram_metrics.log 2>&1 &
+#      async: 600
+#      poll: 0
+
+# =========================================================================
+# NEW STEP 5: Start Network Monitoring on Sensor
+# =========================================================================
+#- name: Start Monitoring on Sensor
+#  hosts: sensor
+#  become: true
+#  tasks:
+#    - name: Start tcpdump for outbound application traffic (UDP 5000)
+#      ansible.builtin.shell: >
+#        nohup tcpdump -i eth0 udp port 5000
+#        -w /home/pi/iot-2026/experiments/with-membrane/macro/sensor_app_traffic.pcap > /dev/null 2>&1 &
+#      async: 600
+#      poll: 0
+
+
+# STEP 6: Start Receiver on Sat1
+- name: Start Receiver on Sat1
+  hosts: sat1
+  tasks:
+    - name: Start receiver on sat1
+      ansible.builtin.shell: "stdbuf -oL ./iwasm-arm64 --addr-pool=0.0.0.0/0 --migration-server=8010 benchmark.wasm > /home/pi/iot-2026/experiments/with-membrane/macro/iwasm.log 2>&1"
+      args:
+        chdir: /home/pi/iot-2026/experiments/with-membrane/macro
+      async: 1200
+      poll: 0
+
+# STEP 7: Start Sender stream on Sensor
+- name: Start Sender on Sensor
+  hosts: sensor
+  tasks:
+    - name: Run sender.py asynchronously
+      ansible.builtin.shell: "python3 /home/pi/iot-2026/experiments/with-membrane/macro/sender.py > /home/pi/iot-2026/experiments/with-membrane/macro/sender.log 2>&1"
+      args:
+        chdir: /home/pi/iot-2026/experiments/with-membrane/macro
+      async: 1200
+      poll: 0
+
+# STEP 8: Run Orchestrated Simulation
+- name: Perform Continuous Migration Simulation
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Run simulation asynchronously
+      ansible.builtin.shell: "python3 ../animate_orbits.py > experiment-orchestrator.log 2>&1"
+      async: 1200
+      poll: 0
+
+    - name: Pause Ansible to let the Simulation run
+      ansible.builtin.pause:
+        seconds: 900
+
+# STEP 9: Cleanup Sensor and Fetch Results
+- name: Cleanup sensor and retrieve results
+  hosts: sensor
+  become: true
+  tasks:
+    - name: Kill sender script and tcpdump
+      ansible.builtin.command: >
+        pkill -2 -f "{{ item }}"
+      loop:
+        - sender.py
+      ignore_errors: true
+
+    - name: Wait for Python script to finish draining and writing CSV
+      ansible.builtin.pause:
+        seconds: 60
+
+    - name: Collect results.csv back to the local host machine
+      ansible.builtin.fetch:
+        src: /home/pi/iot-2026/experiments/with-membrane/macro/results.csv
+        dest: ./results.csv
+        flat: true
+      ignore_errors: true
+
+#    - name: Collect sensor pcap back to local host machine
+#      ansible.builtin.fetch:
+#        src: /home/pi/iot-2026/experiments/with-membrane/macro/sensor_app_traffic.pcap
+#        dest: ./sensor_app_traffic.pcap
+#        flat: true
+#      ignore_errors: true
+
+# STEP 10: Cleanup Satellites and Fetch Results
+- name: Cleanup Satellites
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Kill iwasm runtime, tcpdump, and pidstat
+      ansible.builtin.command: >
+        pkill -2 -f "{{ item }}"
+      loop:
+        - iwasm-arm64
+        - pidstat
+        - tcpdump
+      ignore_errors: true
+
+#    - name: Fetch pcaps and metrics logs to local host machine
+#      ansible.builtin.fetch:
+#        src: "/home/pi/iot-2026/experiments/with-membrane/macro/{{ item }}"
+#        dest: "./{{ inventory_hostname }}_{{ item }}"
+#        flat: true
+#      loop:
+#        - migration_traffic.pcap
+#        - app_traffic.pcap
+#        - cpu_ram_metrics.log
+#      ignore_errors: true
+
+# STEP 11: Cleanup Localhost Simulation
+- name: Cleanup Local Orchestrator
+  hosts: localhost
+  tasks:
+    - name: Kill simulation script on localhost
+      ansible.builtin.command: >
+        pkill -2 -f animate_orbits.py
+      ignore_errors: true

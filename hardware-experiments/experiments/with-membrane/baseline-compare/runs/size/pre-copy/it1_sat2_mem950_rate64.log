@@ -1,0 +1,65 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Receiving pre-copy chunk...
+[LM Client] Pre-copy complete. Proceeding to final handover.
+Frame - IP: 14, function_index: 27, func: 0x55563c27e400
+  frame->ip: 0x7ffed03631f8
+END
+
+Frame - IP: 317, function_index: 17, func: 0x55563c27e220
+  frame->ip: 0x7ffed0363003
+END
+
+Frame - IP: 75, function_index: 18, func: 0x55563c27e250
+  frame->ip: 0x7ffed0363070
+END
+
+Frame - IP: 2891, function_index: 10, func: 0x55563c27e0d0
+  frame->ip: 0x7ffed0360e87
+END
+
+Frame - IP: 114, function_index: 20, func: 0x55563c27e2b0
+  frame->ip: 0x7ffed0363116
+END
+
+Frame - IP: 52, function_index: 9, func: 0x55563c27e0a0
+  frame->ip: 0x7ffed036029b
+END
+
+[LM Client] Migration successfully completed.
+[LM] State received and restored.
+[LM] Starting migration server on port 8010 in background...
+[LM] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x55563c27f1c0 cur_frame=0x55563c2809a0 module_inst=0x55563c27da80 function=0x55563c27e400 prev_frame=0x55563c280894 ip=0x7ffed03631f8 (offset=14)
+[LM/Resume] new function array base=0x55563c27def0 count=88
+[LM/Resume] Took 0.006000 ms to restore application
+[LM/Restore] Live migration restored at 1785689611288.037109 ms
+[LM] Server waiting for connection on port 8010...
+[WASM] Iteration 2500 | Dirtied 0.64 MB @ offset 650 MB (Integrity: OK)
+[WASM] Iteration 2600 | Dirtied 0.64 MB @ offset 714 MB (Integrity: OK)
+[WASM] Iteration 2700 | Dirtied 0.64 MB @ offset 778 MB (Integrity: OK)
+[WASM] Iteration 2800 | Dirtied 0.64 MB @ offset 842 MB (Integrity: OK)
+[WASM] Iteration 2900 | Dirtied 0.64 MB @ offset 906 MB (Integrity: OK)
+[WASM] Iteration 3000 | Dirtied 0.64 MB @ offset 21 MB (Integrity: OK)
+[WASM] Iteration 3100 | Dirtied 0.64 MB @ offset 85 MB (Integrity: OK)
+[WASM] Iteration 3200 | Dirtied 0.64 MB @ offset 149 MB (Integrity: OK)
+[WASM] Iteration 3300 | Dirtied 0.64 MB @ offset 213 MB (Integrity: OK)
+[WASM] Iteration 3400 | Dirtied 0.64 MB @ offset 277 MB (Integrity: OK)
+[WASM] Iteration 3500 | Dirtied 0.64 MB @ offset 341 MB (Integrity: OK)
+[WASM] Iteration 3600 | Dirtied 0.64 MB @ offset 405 MB (Integrity: OK)
+[WASM] Iteration 3700 | Dirtied 0.64 MB @ offset 469 MB (Integrity: OK)
+[WASM] Iteration 3800 | Dirtied 0.64 MB @ offset 533 MB (Integrity: OK)
+[WASM] Iteration 3900 | Dirtied 0.64 MB @ offset 597 MB (Integrity: OK)
+[WASM] Iteration 4000 | Dirtied 0.64 MB @ offset 661 MB (Integrity: OK)
+[WASM] Iteration 4100 | Dirtied 0.64 MB @ offset 725 MB (Integrity: OK)
+[WASM] Iteration 4200 | Dirtied 0.64 MB @ offset 789 MB (Integrity: OK)
+[WASM] Iteration 4300 | Dirtied 0.64 MB @ offset 853 MB (Integrity: OK)
+[WASM] Iteration 4400 | Dirtied 0.64 MB @ offset 917 MB (Integrity: OK)
+[WASM] Iteration 4500 | Dirtied 0.64 MB @ offset 31 MB (Integrity: OK)

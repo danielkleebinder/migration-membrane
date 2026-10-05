@@ -1,0 +1,143 @@
+---
+# STEP 1: Global fact gathering
+- name: Gather Facts from All Nodes
+  hosts: all
+  gather_facts: true
+
+# STEP 2: Prepare satellite nodes to allow CRIU checkpointing
+- name: Prepare Satellite Nodes
+  hosts: satellites
+  tasks:
+    - name: Create uniform simulation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0777"
+        owner: pi
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/syscall-limit
+
+    - name: Reset log files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /home/pi/iot-2026/experiments/with-membrane/syscall-limit/benchmark.wasm
+
+    - name: Copy assets to satellites
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "/home/pi/iot-2026/experiments/with-membrane/syscall-limit/{{ item | basename }}"
+        mode: "0755"
+      loop:
+        - benchmark.wasm
+        - iwasm-arm64
+        - iwasm-arm64-pre-copy
+        - iwasm-arm64-post-copy
+        - iwasm-arm64-stop-copy
+
+# STEP 3.1: Configure Traffic Control on Sat1
+- name: Configure Network Emulation on Sat1
+  hosts: sat1
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Sat2-bound Egress Traffic
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sat1 to Sat2 Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 3.5ms 0.1ms distribution paretonormal loss 0.01%"
+
+    - name: Bind Sat2 Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.12 flowid 1:1"
+
+# STEP 3.2: Configure Traffic Control on Sat2
+- name: Configure Network Emulation on Sat2
+  hosts: sat2
+  become: true
+  tasks:
+    - name: Clear any existing root qdisc configurations
+      ansible.builtin.command: tc qdisc del dev eth0 root
+      ignore_errors: true
+      changed_when: false
+
+    - name: Establish root classful HTB framework
+      ansible.builtin.command: "tc qdisc add dev eth0 root handle 1: htb default 1"
+
+    # Class 1:1 -> Handles Sat1-bound Egress Traffic
+    - name: Define Class 1:1 for Satellite Link
+      ansible.builtin.command: "tc class add dev eth0 parent 1: classid 1:1 htb rate 10gbit"
+
+    - name: Apply Sat2 to Sat1 Netem Profile
+      ansible.builtin.command: "tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 3.5ms 0.1ms distribution paretonormal loss 0.01%"
+
+    - name: Bind Sat1 Destination IP Filter to Class 1:1
+      ansible.builtin.command: "tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip dst 192.168.10.11 flowid 1:1"
+
+# STEP 4: Start the Receiver Container on Sat1 FIRST (Creates the socket file)
+- name: Start Receiver on Sat1
+  hosts: sat1
+  tasks:
+    - name: Start receiver on sat1
+      ansible.builtin.shell: "stdbuf -oL ./{{ iwasm_exe | default('iwasm-arm64') }} --migration-server=8010 benchmark.wasm {{ mem_size | default('256') }} {{ dirty_rate | default('64') }} {{ syscalls | default('1000') }} {{ syscall_type | default('2') }} {{ syscall_bytes | default('256') }} > /home/pi/iot-2026/experiments/with-membrane/syscall-limit/iwasm.log 2>&1"
+      args:
+        chdir: /home/pi/iot-2026/experiments/with-membrane/syscall-limit
+      async: 600
+      poll: 0
+
+# STEP 8: Let the simulation stream run into the workout loop
+- name: Settle simulation before migration
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Pause for data accumulation before migration
+      ansible.builtin.pause:
+        seconds: 2
+
+# STEP 9: Safe Native Migration handling
+- name: Perform Live-Migration from Sat1 to Sat2
+  hosts: sat2
+  tasks:
+    - name: Trigger migration on Sat2 targeting Sat1
+      ansible.builtin.shell: "stdbuf -oL ./{{ iwasm_exe | default('iwasm-arm64') }} --migrate=192.168.10.11:8010 --migration-server=8010 benchmark.wasm > /home/pi/iot-2026/experiments/with-membrane/syscall-limit/iwasm.log 2>&1"
+      args:
+        chdir: /home/pi/iot-2026/experiments/with-membrane/syscall-limit
+      async: 600
+      poll: 0
+
+# STEP 10: Let the simulation stream run into the workout loop
+- name: Settle simulation
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Pause for data accumulation after migration
+      ansible.builtin.pause:
+        seconds: "{{ sleep_time | default('120') }}"
+
+# STEP 12: Cleanup satellites
+- name: Cleanup satellites
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Kill sender script
+      ansible.builtin.command: >
+        pkill -2 -f benchmark.wasm
+      ignore_errors: true
+
+    - name: Wait for Python script to finish draining and writing CSV
+      ansible.builtin.pause:
+        seconds: 3
+
+    - name: Collect results back to the local host machine
+      ansible.builtin.fetch:
+        src: /home/pi/iot-2026/experiments/with-membrane/syscall-limit/iwasm.log
+        dest: "./{{ inventory_hostname }}_iwasm.log"
+        flat: true

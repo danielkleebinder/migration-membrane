@@ -1,0 +1,34 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] Membrane channel connected to 192.168.10.11:8011
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 7, frame offset: 2888)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785176944940.114258 ms).
+[LM/Restore] Enter membrane replay mode (1785176944940.144043 ms)...
+[LM/Checkpoint] Migration server completed its tasks (1785176944947.487305 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785176944947.499756 ms)
+[LM/Restore] State restoration complete (1785176944947.519775 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785176944947.609375 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x55560df031c0 cur_frame=0x55560df089c0 module_inst=0x55560df01a80 function=0x55560df02400 prev_frame=0x55560df088b4 ip=0x7ffee88b31f8 (offset=14, is_import=0) 1785176944947.621094 ms
+[LM/Resume] New function array base=0x55560df01ef0 count=88
+[LM/Resume] Took 0.008000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785176944947.630371)
+[LM] Server waiting for connection on port 8010...
+[LM/Restore] Closed side sock fd 5
+[LM/Restore] Live migration restored at 1785176945020.494873 ms
+[WASM] Iteration 1100 | Dirtied 0.64 MB @ offset 4 MB (Integrity: OK)
+[WASM] Iteration 1200 | Dirtied 0.64 MB @ offset 68 MB (Integrity: OK)
+[WASM] Iteration 1300 | Dirtied 0.64 MB @ offset 132 MB (Integrity: OK)
+[WASM] Iteration 1400 | Dirtied 0.64 MB @ offset 196 MB (Integrity: OK)
+[WASM] Iteration 1500 | Dirtied 0.64 MB @ offset 260 MB (Integrity: OK)
+[WASM] Iteration 1600 | Dirtied 0.64 MB @ offset 324 MB (Integrity: OK)
+[WASM] Iteration 1700 | Dirtied 0.64 MB @ offset 388 MB (Integrity: OK)
+[WASM] Iteration 1800 | Dirtied 0.64 MB @ offset 452 MB (Integrity: OK)
+[WASM] Iteration 1900 | Dirtied 0.64 MB @ offset 516 MB (Integrity: OK)
+[WASM] Iteration 2000 | Dirtied 0.64 MB @ offset 580 MB (Integrity: OK)
+[WASM] Iteration 2100 | Dirtied 0.64 MB @ offset 644 MB (Integrity: OK)

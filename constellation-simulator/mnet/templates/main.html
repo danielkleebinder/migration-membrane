@@ -1,0 +1,227 @@
+<html>
+  <head>
+	<meta http-equiv="refresh" content="10">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+	<div class="col-lg-8 mx-auto p-4 py-md-5">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active">Home</li>
+			</ol>
+		</nav>
+		<header class="d-flex align-items-center mb-5 border-bottom">
+			<span class="fs-4"> SatNetMiniSim</span>
+		</header>
+	<p>	
+	<b>Network:</b> {{ info["rings"] }} Rings x {{ info["ring_nodes"] }} Nodes
+	</p>
+    <p>
+	<b>Links:</b> 
+	 {{ info["link_stats"]["count"] }} Total, 
+	 {{ info["link_stats"]["up_count"] }} Up,
+	 {{ info["link_stats"]["count"] - info["link_stats"]["up_count"] }} Down
+    </p>
+	<p>	
+	<b>Sample Time:</b>{{ info["current_time"] }}
+	</p>
+	<p>
+	<b>Total Run Time:</b> {{ info["run_time"] }}
+	</p>
+	<p>
+
+	<table>
+   	    <tr>
+	        <th></th>
+	        <th>Failed Connections</th>
+	        <th>Good Connections</th>
+   	    </tr>
+	    {% if info["monitor_stable_nodes"] %}
+   	    <tr>
+		<td><b>Stable Nodes</b></td>
+		<td>
+		    <div style="width: 500px;">
+		    <canvas id="fail_stable"/>
+	 	    </div>
+		</td>
+		<td>
+		    <div style="width: 500px;">
+		    <canvas id="ok_stable"/>
+	 	    </div>
+		</td>
+	    </tr>
+	    {% endif %}
+   	    <tr>
+	    	<td><b>Dynamic Nodes</b></td>
+		<td>
+		    <div style="width: 500px;">
+		    <canvas id="fail_dynamic"/>
+	 	    </div>
+		</td>
+		<td>
+		    <div style="width: 500px;">
+		    <canvas id="ok_dynamic"/>
+	 	    </div>
+		</td>
+	    </tr>
+</table>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js" 
+		integrity="sha512-CMF3tQtjOoOJoOKlsS7/2loJlkyctwzSoDK/S40iAB+MqWSaf50uObGQSk5Ny/gfRhRCjNLvoxuCvdnERU4WGg==" 
+		crossorigin="anonymous" 
+		referrerpolicy="no-referrer"></script>
+
+    <script> 
+
+	    const dates = [
+		{% for entry in info["stats_dates"] %}
+		"{{entry}}",
+		{% endfor %}
+		];
+
+        const stats_stable_ok = {{ info["stats_stable_ok"] }};
+        const stats_stable_fail = {{ info["stats_stable_fail"] }};
+        const stats_dynamic_ok = {{ info["stats_dynamic_ok"] }};
+        const stats_dynamic_fail = {{ info["stats_dynamic_fail"] }};
+
+    {% if info["monitor_stable_nodes"] %}
+    new Chart(
+        document.getElementById('fail_stable'),
+        {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [
+                    {
+                        label: 'Pings',
+                        data: stats_stable_fail
+                    },
+               ]
+            }
+        }
+    );
+	    
+    new Chart(
+        document.getElementById('ok_stable'),
+        {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [
+                    {
+                        label: 'Pings',
+                        data: stats_stable_ok
+                    }
+                ]
+            }
+        }
+    );
+    {% endif %}
+
+    new Chart(
+        document.getElementById('fail_dynamic'),
+        {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [
+                    {
+                        label: 'Pings',
+                        data: stats_dynamic_fail
+                    }
+                ]
+            }
+        }
+    );
+ 
+    new Chart(
+        document.getElementById('ok_dynamic'),
+        {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [
+                    {
+                        label: 'Pings',
+                        data: stats_dynamic_ok
+                    }
+                ]
+            }
+        }
+    );
+  </script>
+
+	<h2>Events</h2>
+	<ul>
+	{% if info["events"]|length == 0 %}
+	<i>None</i>
+	{% endif %}
+	{% for entry in info["events"] %}
+	<li> {{ entry[0] }}: {{ entry[1] }}
+	{% endfor %}
+	</ul>
+
+
+  	<h2>Ground Stations</h2>
+	<ul>
+	{% for entry in info["stations"] %}
+		<li>
+			<a href="{{ url_for('view_station', name=entry.name) }}">
+				{{ entry.name }} 
+			</a>
+			{{ entry.defaultIP() }}
+	  		<table style="display:inline">
+	      		<body>
+	  			<tr>
+	     			{% for stat in info["ping_stats"][entry.name] %}
+		    		{% if stat[1] == 1 %}
+	      	    		{%- set bg="lightgreen" %}
+		    		{% elif stat[1] == 0 %}
+	      	    		{%- set bg="pink" %}
+		    		{% endif %}
+		    		<td style="background-color:{{bg}};">
+							{{ stat[0] }}
+		    		</td>
+	      			{% endfor %} 
+	  			</tr>
+	      		</body>
+	  		</table>
+			<ul>
+			{% for link in entry.uplinks %}
+			<li>
+				Uplink: {{ link.sat_name }} {{ link.distance }} km
+			</li>
+			{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+	</ul>
+
+	<h2>Routers ({{ info["routers"]|length }}) </h2>
+	<ul>
+	{% for entry in info["routers"] %}
+	<li> <a href="{{ url_for('view_router', node=entry[0]) }}">
+			{{ entry[0] }} </a>: {{ entry[1] }}
+	  		<table style="display:inline">
+	      		<body>
+ 				<tr>
+	     			{% for stat in info["ping_stats"][entry[0]] %}
+		    		{% if stat[1] == 1 %}
+	      	    		{%- set bg="lightgreen" %}
+		    		{% elif stat[1] == 0 %}
+	      	    		{%- set bg="pink" %}
+		    		{% endif %}
+	    			<td style="background-color:{{bg}};">
+				{{ stat[0] }}
+	    			</td>
+	      			{% endfor %} 
+  				</tr>
+	      		</body>
+	  		</table>
+	{% endfor %}
+	</ul>
+
+	</div>
+
+  </body>
+</html>

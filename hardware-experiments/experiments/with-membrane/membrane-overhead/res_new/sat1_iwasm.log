@@ -1,0 +1,1312 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785844129192.051025 ms).
+[LM] Server waiting for connection on port 8010...
+=== Starting WASI Syscall Microbenchmark (10000 iterations) ===
+[BENCH/IO] Iteration: 0
+[BENCH/IO] Iteration: 1
+[BENCH/IO] Iteration: 2
+[BENCH/IO] Iteration: 3
+[BENCH/IO] Iteration: 4
+[BENCH/IO] Iteration: 5
+[BENCH/IO] Iteration: 6
+[BENCH/IO] Iteration: 7
+[BENCH/IO] Iteration: 8
+[BENCH/IO] Iteration: 9
+[BENCH/IO] Iteration: 10
+[BENCH/IO] Iteration: 11
+[BENCH/IO] Iteration: 12
+[BENCH/IO] Iteration: 13
+[BENCH/IO] Iteration: 14
+[BENCH/IO] Iteration: 15
+[BENCH/IO] Iteration: 16
+[BENCH/IO] Iteration: 17
+[BENCH/IO] Iteration: 18
+[BENCH/IO] Iteration: 19
+[BENCH/IO] Iteration: 20
+[BENCH/IO] Iteration: 21
+[BENCH/IO] Iteration: 22
+[BENCH/IO] Iteration: 23
+[BENCH/IO] Iteration: 24
+[BENCH/IO] Iteration: 25
+[BENCH/IO] Iteration: 26
+[BENCH/IO] Iteration: 27
+[BENCH/IO] Iteration: 28
+[BENCH/IO] Iteration: 29
+[BENCH/IO] Iteration: 30
+[BENCH/IO] Iteration: 31
+[BENCH/IO] Iteration: 32
+[BENCH/IO] Iteration: 33
+[BENCH/IO] Iteration: 34
+[BENCH/IO] Iteration: 35
+[BENCH/IO] Iteration: 36
+[BENCH/IO] Iteration: 37
+[BENCH/IO] Iteration: 38
+[BENCH/IO] Iteration: 39
+[BENCH/IO] Iteration: 40
+[BENCH/IO] Iteration: 41
+[BENCH/IO] Iteration: 42
+[BENCH/IO] Iteration: 43
+[BENCH/IO] Iteration: 44
+[BENCH/IO] Iteration: 45
+[BENCH/IO] Iteration: 46
+[BENCH/IO] Iteration: 47
+[BENCH/IO] Iteration: 48
+[BENCH/IO] Iteration: 49
+[BENCH/IO] Iteration: 50
+[BENCH/IO] Iteration: 51
+[BENCH/IO] Iteration: 52
+[BENCH/IO] Iteration: 53
+[BENCH/IO] Iteration: 54
+[BENCH/IO] Iteration: 55
+[BENCH/IO] Iteration: 56
+[BENCH/IO] Iteration: 57
+[BENCH/IO] Iteration: 58
+[BENCH/IO] Iteration: 59
+[BENCH/IO] Iteration: 60
+[BENCH/IO] Iteration: 61
+[BENCH/IO] Iteration: 62
+[BENCH/IO] Iteration: 63
+[BENCH/IO] Iteration: 64
+[BENCH/IO] Iteration: 65
+[BENCH/IO] Iteration: 66
+[BENCH/IO] Iteration: 67
+[BENCH/IO] Iteration: 68
+[BENCH/IO] Iteration: 69
+[BENCH/IO] Iteration: 70
+[BENCH/IO] Iteration: 71
+[BENCH/IO] Iteration: 72
+[BENCH/IO] Iteration: 73
+[BENCH/IO] Iteration: 74
+[BENCH/IO] Iteration: 75
+[BENCH/IO] Iteration: 76
+[BENCH/IO] Iteration: 77
+[BENCH/IO] Iteration: 78
+[BENCH/IO] Iteration: 79
+[BENCH/IO] Iteration: 80
+[BENCH/IO] Iteration: 81
+[BENCH/IO] Iteration: 82
+[BENCH/IO] Iteration: 83
+[BENCH/IO] Iteration: 84
+[BENCH/IO] Iteration: 85
+[BENCH/IO] Iteration: 86
+[BENCH/IO] Iteration: 87
+[BENCH/IO] Iteration: 88
+[BENCH/IO] Iteration: 89
+[BENCH/IO] Iteration: 90
+[BENCH/IO] Iteration: 91
+[BENCH/IO] Iteration: 92
+[BENCH/IO] Iteration: 93
+[BENCH/IO] Iteration: 94
+[BENCH/IO] Iteration: 95
+[BENCH/IO] Iteration: 96
+[BENCH/IO] Iteration: 97
+[BENCH/IO] Iteration: 98
+[BENCH/IO] Iteration: 99
+[BENCH/IO] Iteration: 100
+[BENCH/IO] Iteration: 101
+[BENCH/IO] Iteration: 102
+[BENCH/IO] Iteration: 103
+[BENCH/IO] Iteration: 104
+[BENCH/IO] Iteration: 105
+[BENCH/IO] Iteration: 106
+[BENCH/IO] Iteration: 107
+[BENCH/IO] Iteration: 108
+[BENCH/IO] Iteration: 109
+[BENCH/IO] Iteration: 110
+[BENCH/IO] Iteration: 111
+[BENCH/IO] Iteration: 112
+[BENCH/IO] Iteration: 113
+[BENCH/IO] Iteration: 114
+[BENCH/IO] Iteration: 115
+[BENCH/IO] Iteration: 116
+[BENCH/IO] Iteration: 117
+[BENCH/IO] Iteration: 118
+[BENCH/IO] Iteration: 119
+[BENCH/IO] Iteration: 120
+[BENCH/IO] Iteration: 121
+[BENCH/IO] Iteration: 122
+[BENCH/IO] Iteration: 123
+[BENCH/IO] Iteration: 124
+[BENCH/IO] Iteration: 125
+[BENCH/IO] Iteration: 126
+[BENCH/IO] Iteration: 127
+[BENCH/IO] Iteration: 128
+[BENCH/IO] Iteration: 129
+[BENCH/IO] Iteration: 130
+[BENCH/IO] Iteration: 131
+[BENCH/IO] Iteration: 132
+[BENCH/IO] Iteration: 133
+[BENCH/IO] Iteration: 134
+[BENCH/IO] Iteration: 135
+[BENCH/IO] Iteration: 136
+[BENCH/IO] Iteration: 137
+[BENCH/IO] Iteration: 138
+[BENCH/IO] Iteration: 139
+[BENCH/IO] Iteration: 140
+[BENCH/IO] Iteration: 141
+[BENCH/IO] Iteration: 142
+[BENCH/IO] Iteration: 143
+[BENCH/IO] Iteration: 144
+[BENCH/IO] Iteration: 145
+[BENCH/IO] Iteration: 146
+[BENCH/IO] Iteration: 147
+[BENCH/IO] Iteration: 148
+[BENCH/IO] Iteration: 149
+[BENCH/IO] Iteration: 150
+[BENCH/IO] Iteration: 151
+[BENCH/IO] Iteration: 152
+[BENCH/IO] Iteration: 153
+[BENCH/IO] Iteration: 154
+[BENCH/IO] Iteration: 155
+[BENCH/IO] Iteration: 156
+[BENCH/IO] Iteration: 157
+[BENCH/IO] Iteration: 158
+[BENCH/IO] Iteration: 159
+[BENCH/IO] Iteration: 160
+[BENCH/IO] Iteration: 161
+[BENCH/IO] Iteration: 162
+[BENCH/IO] Iteration: 163
+[BENCH/IO] Iteration: 164
+[BENCH/IO] Iteration: 165
+[BENCH/IO] Iteration: 166
+[BENCH/IO] Iteration: 167
+[BENCH/IO] Iteration: 168
+[BENCH/IO] Iteration: 169
+[BENCH/IO] Iteration: 170
+[BENCH/IO] Iteration: 171
+[BENCH/IO] Iteration: 172
+[BENCH/IO] Iteration: 173
+[BENCH/IO] Iteration: 174
+[BENCH/IO] Iteration: 175
+[BENCH/IO] Iteration: 176
+[BENCH/IO] Iteration: 177
+[BENCH/IO] Iteration: 178
+[BENCH/IO] Iteration: 179
+[BENCH/IO] Iteration: 180
+[BENCH/IO] Iteration: 181
+[BENCH/IO] Iteration: 182
+[BENCH/IO] Iteration: 183
+[BENCH/IO] Iteration: 184
+[BENCH/IO] Iteration: 185
+[BENCH/IO] Iteration: 186
+[BENCH/IO] Iteration: 187
+[BENCH/IO] Iteration: 188
+[BENCH/IO] Iteration: 189
+[BENCH/IO] Iteration: 190
+[BENCH/IO] Iteration: 191
+[BENCH/IO] Iteration: 192
+[BENCH/IO] Iteration: 193
+[BENCH/IO] Iteration: 194
+[BENCH/IO] Iteration: 195
+[BENCH/IO] Iteration: 196
+[BENCH/IO] Iteration: 197
+[BENCH/IO] Iteration: 198
+[BENCH/IO] Iteration: 199
+[BENCH/IO] Iteration: 200
+[BENCH/IO] Iteration: 201
+[BENCH/IO] Iteration: 202
+[BENCH/IO] Iteration: 203
+[BENCH/IO] Iteration: 204
+[BENCH/IO] Iteration: 205
+[BENCH/IO] Iteration: 206
+[BENCH/IO] Iteration: 207
+[BENCH/IO] Iteration: 208
+[BENCH/IO] Iteration: 209
+[BENCH/IO] Iteration: 210
+[BENCH/IO] Iteration: 211
+[BENCH/IO] Iteration: 212
+[BENCH/IO] Iteration: 213
+[BENCH/IO] Iteration: 214
+[BENCH/IO] Iteration: 215
+[BENCH/IO] Iteration: 216
+[BENCH/IO] Iteration: 217
+[BENCH/IO] Iteration: 218
+[BENCH/IO] Iteration: 219
+[BENCH/IO] Iteration: 220
+[BENCH/IO] Iteration: 221
+[BENCH/IO] Iteration: 222
+[BENCH/IO] Iteration: 223
+[BENCH/IO] Iteration: 224
+[BENCH/IO] Iteration: 225
+[BENCH/IO] Iteration: 226
+[BENCH/IO] Iteration: 227
+[BENCH/IO] Iteration: 228
+[BENCH/IO] Iteration: 229
+[BENCH/IO] Iteration: 230
+[BENCH/IO] Iteration: 231
+[BENCH/IO] Iteration: 232
+[BENCH/IO] Iteration: 233
+[BENCH/IO] Iteration: 234
+[BENCH/IO] Iteration: 235
+[BENCH/IO] Iteration: 236
+[BENCH/IO] Iteration: 237
+[BENCH/IO] Iteration: 238
+[BENCH/IO] Iteration: 239
+[BENCH/IO] Iteration: 240
+[BENCH/IO] Iteration: 241
+[BENCH/IO] Iteration: 242
+[BENCH/IO] Iteration: 243
+[BENCH/IO] Iteration: 244
+[BENCH/IO] Iteration: 245
+[BENCH/IO] Iteration: 246
+[BENCH/IO] Iteration: 247
+[BENCH/IO] Iteration: 248
+[BENCH/IO] Iteration: 249
+[BENCH/IO] Iteration: 250
+[BENCH/IO] Iteration: 251
+[BENCH/IO] Iteration: 252
+[BENCH/IO] Iteration: 253
+[BENCH/IO] Iteration: 254
+[BENCH/IO] Iteration: 255
+[BENCH/IO] Iteration: 256
+[BENCH/IO] Iteration: 257
+[BENCH/IO] Iteration: 258
+[BENCH/IO] Iteration: 259
+[BENCH/IO] Iteration: 260
+[BENCH/IO] Iteration: 261
+[BENCH/IO] Iteration: 262
+[BENCH/IO] Iteration: 263
+[BENCH/IO] Iteration: 264
+[BENCH/IO] Iteration: 265
+[BENCH/IO] Iteration: 266
+[BENCH/IO] Iteration: 267
+[BENCH/IO] Iteration: 268
+[BENCH/IO] Iteration: 269
+[BENCH/IO] Iteration: 270
+[BENCH/IO] Iteration: 271
+[BENCH/IO] Iteration: 272
+[BENCH/IO] Iteration: 273
+[BENCH/IO] Iteration: 274
+[BENCH/IO] Iteration: 275
+[BENCH/IO] Iteration: 276
+[BENCH/IO] Iteration: 277
+[BENCH/IO] Iteration: 278
+[BENCH/IO] Iteration: 279
+[BENCH/IO] Iteration: 280
+[BENCH/IO] Iteration: 281
+[BENCH/IO] Iteration: 282
+[BENCH/IO] Iteration: 283
+[BENCH/IO] Iteration: 284
+[BENCH/IO] Iteration: 285
+[BENCH/IO] Iteration: 286
+[BENCH/IO] Iteration: 287
+[BENCH/IO] Iteration: 288
+[BENCH/IO] Iteration: 289
+[BENCH/IO] Iteration: 290
+[BENCH/IO] Iteration: 291
+[BENCH/IO] Iteration: 292
+[BENCH/IO] Iteration: 293
+[BENCH/IO] Iteration: 294
+[BENCH/IO] Iteration: 295
+[BENCH/IO] Iteration: 296
+[BENCH/IO] Iteration: 297
+[BENCH/IO] Iteration: 298
+[BENCH/IO] Iteration: 299
+[BENCH/IO] Iteration: 300
+[BENCH/IO] Iteration: 301
+[BENCH/IO] Iteration: 302
+[BENCH/IO] Iteration: 303
+[BENCH/IO] Iteration: 304
+[BENCH/IO] Iteration: 305
+[BENCH/IO] Iteration: 306
+[BENCH/IO] Iteration: 307
+[BENCH/IO] Iteration: 308
+[BENCH/IO] Iteration: 309
+[BENCH/IO] Iteration: 310
+[BENCH/IO] Iteration: 311
+[BENCH/IO] Iteration: 312
+[BENCH/IO] Iteration: 313
+[BENCH/IO] Iteration: 314
+[BENCH/IO] Iteration: 315
+[BENCH/IO] Iteration: 316
+[BENCH/IO] Iteration: 317
+[BENCH/IO] Iteration: 318
+[BENCH/IO] Iteration: 319
+[BENCH/IO] Iteration: 320
+[BENCH/IO] Iteration: 321
+[BENCH/IO] Iteration: 322
+[BENCH/IO] Iteration: 323
+[BENCH/IO] Iteration: 324
+[BENCH/IO] Iteration: 325
+[BENCH/IO] Iteration: 326
+[BENCH/IO] Iteration: 327
+[BENCH/IO] Iteration: 328
+[BENCH/IO] Iteration: 329
+[BENCH/IO] Iteration: 330
+[BENCH/IO] Iteration: 331
+[BENCH/IO] Iteration: 332
+[BENCH/IO] Iteration: 333
+[BENCH/IO] Iteration: 334
+[BENCH/IO] Iteration: 335
+[BENCH/IO] Iteration: 336
+[BENCH/IO] Iteration: 337
+[BENCH/IO] Iteration: 338
+[BENCH/IO] Iteration: 339
+[BENCH/IO] Iteration: 340
+[BENCH/IO] Iteration: 341
+[BENCH/IO] Iteration: 342
+[BENCH/IO] Iteration: 343
+[BENCH/IO] Iteration: 344
+[BENCH/IO] Iteration: 345
+[BENCH/IO] Iteration: 346
+[BENCH/IO] Iteration: 347
+[BENCH/IO] Iteration: 348
+[BENCH/IO] Iteration: 349
+[BENCH/IO] Iteration: 350
+[BENCH/IO] Iteration: 351
+[BENCH/IO] Iteration: 352
+[BENCH/IO] Iteration: 353
+[BENCH/IO] Iteration: 354
+[BENCH/IO] Iteration: 355
+[BENCH/IO] Iteration: 356
+[BENCH/IO] Iteration: 357
+[BENCH/IO] Iteration: 358
+[BENCH/IO] Iteration: 359
+[BENCH/IO] Iteration: 360
+[BENCH/IO] Iteration: 361
+[BENCH/IO] Iteration: 362
+[BENCH/IO] Iteration: 363
+[BENCH/IO] Iteration: 364
+[BENCH/IO] Iteration: 365
+[BENCH/IO] Iteration: 366
+[BENCH/IO] Iteration: 367
+[BENCH/IO] Iteration: 368
+[BENCH/IO] Iteration: 369
+[BENCH/IO] Iteration: 370
+[BENCH/IO] Iteration: 371
+[BENCH/IO] Iteration: 372
+[BENCH/IO] Iteration: 373
+[BENCH/IO] Iteration: 374
+[BENCH/IO] Iteration: 375
+[BENCH/IO] Iteration: 376
+[BENCH/IO] Iteration: 377
+[BENCH/IO] Iteration: 378
+[BENCH/IO] Iteration: 379
+[BENCH/IO] Iteration: 380
+[BENCH/IO] Iteration: 381
+[BENCH/IO] Iteration: 382
+[BENCH/IO] Iteration: 383
+[BENCH/IO] Iteration: 384
+[BENCH/IO] Iteration: 385
+[BENCH/IO] Iteration: 386
+[BENCH/IO] Iteration: 387
+[BENCH/IO] Iteration: 388
+[BENCH/IO] Iteration: 389
+[BENCH/IO] Iteration: 390
+[BENCH/IO] Iteration: 391
+[BENCH/IO] Iteration: 392
+[BENCH/IO] Iteration: 393
+[BENCH/IO] Iteration: 394
+[BENCH/IO] Iteration: 395
+[BENCH/IO] Iteration: 396
+[BENCH/IO] Iteration: 397
+[BENCH/IO] Iteration: 398
+[BENCH/IO] Iteration: 399
+[BENCH/IO] Iteration: 400
+[BENCH/IO] Iteration: 401
+[BENCH/IO] Iteration: 402
+[BENCH/IO] Iteration: 403
+[BENCH/IO] Iteration: 404
+[BENCH/IO] Iteration: 405
+[BENCH/IO] Iteration: 406
+[BENCH/IO] Iteration: 407
+[BENCH/IO] Iteration: 408
+[BENCH/IO] Iteration: 409
+[BENCH/IO] Iteration: 410
+[BENCH/IO] Iteration: 411
+[BENCH/IO] Iteration: 412
+[BENCH/IO] Iteration: 413
+[BENCH/IO] Iteration: 414
+[BENCH/IO] Iteration: 415
+[BENCH/IO] Iteration: 416
+[BENCH/IO] Iteration: 417
+[BENCH/IO] Iteration: 418
+[BENCH/IO] Iteration: 419
+[BENCH/IO] Iteration: 420
+[BENCH/IO] Iteration: 421
+[BENCH/IO] Iteration: 422
+[BENCH/IO] Iteration: 423
+[BENCH/IO] Iteration: 424
+[BENCH/IO] Iteration: 425
+[BENCH/IO] Iteration: 426
+[BENCH/IO] Iteration: 427
+[BENCH/IO] Iteration: 428
+[BENCH/IO] Iteration: 429
+[BENCH/IO] Iteration: 430
+[BENCH/IO] Iteration: 431
+[BENCH/IO] Iteration: 432
+[BENCH/IO] Iteration: 433
+[BENCH/IO] Iteration: 434
+[BENCH/IO] Iteration: 435
+[BENCH/IO] Iteration: 436
+[BENCH/IO] Iteration: 437
+[BENCH/IO] Iteration: 438
+[BENCH/IO] Iteration: 439
+[BENCH/IO] Iteration: 440
+[BENCH/IO] Iteration: 441
+[BENCH/IO] Iteration: 442
+[BENCH/IO] Iteration: 443
+[BENCH/IO] Iteration: 444
+[BENCH/IO] Iteration: 445
+[BENCH/IO] Iteration: 446
+[BENCH/IO] Iteration: 447
+[BENCH/IO] Iteration: 448
+[BENCH/IO] Iteration: 449
+[BENCH/IO] Iteration: 450
+[BENCH/IO] Iteration: 451
+[BENCH/IO] Iteration: 452
+[BENCH/IO] Iteration: 453
+[BENCH/IO] Iteration: 454
+[BENCH/IO] Iteration: 455
+[BENCH/IO] Iteration: 456
+[BENCH/IO] Iteration: 457
+[BENCH/IO] Iteration: 458
+[BENCH/IO] Iteration: 459
+[BENCH/IO] Iteration: 460
+[BENCH/IO] Iteration: 461
+[BENCH/IO] Iteration: 462
+[BENCH/IO] Iteration: 463
+[BENCH/IO] Iteration: 464
+[BENCH/IO] Iteration: 465
+[BENCH/IO] Iteration: 466
+[BENCH/IO] Iteration: 467
+[BENCH/IO] Iteration: 468
+[BENCH/IO] Iteration: 469
+[BENCH/IO] Iteration: 470
+[BENCH/IO] Iteration: 471
+[BENCH/IO] Iteration: 472
+[BENCH/IO] Iteration: 473
+[BENCH/IO] Iteration: 474
+[BENCH/IO] Iteration: 475
+[BENCH/IO] Iteration: 476
+[BENCH/IO] Iteration: 477
+[BENCH/IO] Iteration: 478
+[BENCH/IO] Iteration: 479
+[BENCH/IO] Iteration: 480
+[BENCH/IO] Iteration: 481
+[BENCH/IO] Iteration: 482
+[BENCH/IO] Iteration: 483
+[BENCH/IO] Iteration: 484
+[BENCH/IO] Iteration: 485
+[BENCH/IO] Iteration: 486
+[BENCH/IO] Iteration: 487
+[BENCH/IO] Iteration: 488
+[BENCH/IO] Iteration: 489
+[BENCH/IO] Iteration: 490
+[BENCH/IO] Iteration: 491
+[BENCH/IO] Iteration: 492
+[BENCH/IO] Iteration: 493
+[BENCH/IO] Iteration: 494
+[BENCH/IO] Iteration: 495
+[BENCH/IO] Iteration: 496
+[BENCH/IO] Iteration: 497
+[BENCH/IO] Iteration: 498
+[BENCH/IO] Iteration: 499
+[BENCH/IO] Iteration: 500
+[BENCH/IO] Iteration: 501
+[BENCH/IO] Iteration: 502
+[BENCH/IO] Iteration: 503
+[BENCH/IO] Iteration: 504
+[BENCH/IO] Iteration: 505
+[BENCH/IO] Iteration: 506
+[BENCH/IO] Iteration: 507
+[BENCH/IO] Iteration: 508
+[BENCH/IO] Iteration: 509
+[BENCH/IO] Iteration: 510
+[BENCH/IO] Iteration: 511
+[BENCH/IO] Iteration: 512
+[BENCH/IO] Iteration: 513
+[BENCH/IO] Iteration: 514
+[BENCH/IO] Iteration: 515
+[BENCH/IO] Iteration: 516
+[BENCH/IO] Iteration: 517
+[BENCH/IO] Iteration: 518
+[BENCH/IO] Iteration: 519
+[BENCH/IO] Iteration: 520
+[BENCH/IO] Iteration: 521
+[BENCH/IO] Iteration: 522
+[BENCH/IO] Iteration: 523
+[BENCH/IO] Iteration: 524
+[BENCH/IO] Iteration: 525
+[BENCH/IO] Iteration: 526
+[BENCH/IO] Iteration: 527
+[BENCH/IO] Iteration: 528
+[BENCH/IO] Iteration: 529
+[BENCH/IO] Iteration: 530
+[BENCH/IO] Iteration: 531
+[BENCH/IO] Iteration: 532
+[BENCH/IO] Iteration: 533
+[BENCH/IO] Iteration: 534
+[BENCH/IO] Iteration: 535
+[BENCH/IO] Iteration: 536
+[BENCH/IO] Iteration: 537
+[BENCH/IO] Iteration: 538
+[BENCH/IO] Iteration: 539
+[BENCH/IO] Iteration: 540
+[BENCH/IO] Iteration: 541
+[BENCH/IO] Iteration: 542
+[BENCH/IO] Iteration: 543
+[BENCH/IO] Iteration: 544
+[BENCH/IO] Iteration: 545
+[BENCH/IO] Iteration: 546
+[BENCH/IO] Iteration: 547
+[BENCH/IO] Iteration: 548
+[BENCH/IO] Iteration: 549
+[BENCH/IO] Iteration: 550
+[BENCH/IO] Iteration: 551
+[LM] Client connected. Migration is initiated (1785844133166.900391 ms)...
+[LM/Checkpoint] Server waiting for membrane connection on port 8011...
+[LM/Checkpoint] Membrane channel connected on port 8011
+[LM/Checkpoint] Sync all to frame at opcode=10 (next=41)
+CHECK: frame 0x55563628819c, frame->ip 65
+[LM/Checkpoint] Memory snapshot captured after 1.063965 ms
+[LM/Checkpoint] Phase 1.1: Sending state metadata...
+[LM/Checkpoint] Memory metadata transmitted after 0.045654 ms
+[LM/Checkpoint] Phase 1.2: Sending initial bulk memory (64 MB)...
+[LM/Checkpoint] Main interpreter thread halted for 0.326000 ms
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 371 ns, transfer: 8537 ns, record total: 8908 ns, native total: 10815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 389 ns, transfer: 333 ns, record total: 722 ns, native total: 1057348 ns
+[BENCH/IO] Iteration: 552
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 389 ns, transfer: 259 ns, record total: 648 ns, native total: 5185 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 352 ns, transfer: 222 ns, record total: 574 ns, native total: 889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 277 ns, transfer: 204 ns, record total: 481 ns, native total: 2278 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 389 ns, transfer: 259 ns, record total: 648 ns, native total: 2722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 167 ns, transfer: 222 ns, record total: 389 ns, native total: 759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 518 ns, transfer: 445 ns, record total: 963 ns, native total: 4464561 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 278 ns, transfer: 148 ns, record total: 426 ns, native total: 2537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 260 ns, transfer: 296 ns, record total: 556 ns, native total: 1056626 ns
+[BENCH/IO] Iteration: 553
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 259 ns, transfer: 593 ns, record total: 852 ns, native total: 6038 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 222 ns, record total: 481 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 167 ns, transfer: 222 ns, record total: 389 ns, native total: 1241 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 223 ns, transfer: 500 ns, record total: 723 ns, native total: 4019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 185 ns, transfer: 241 ns, record total: 426 ns, native total: 907 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 704 ns, transfer: 407 ns, record total: 1111 ns, native total: 4390671 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 259 ns, transfer: 167 ns, record total: 426 ns, native total: 2463 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 408 ns, transfer: 463 ns, record total: 871 ns, native total: 1062274 ns
+[BENCH/IO] Iteration: 554
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 203 ns, transfer: 241 ns, record total: 444 ns, native total: 7778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 334 ns, transfer: 148 ns, record total: 482 ns, native total: 871 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 166 ns, transfer: 204 ns, record total: 370 ns, native total: 1352 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 297 ns, transfer: 166 ns, record total: 463 ns, native total: 3241 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 185 ns, transfer: 167 ns, record total: 352 ns, native total: 833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 463 ns, transfer: 833 ns, record total: 1296 ns, native total: 5430019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 277 ns, transfer: 167 ns, record total: 444 ns, native total: 3352 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 352 ns, transfer: 370 ns, record total: 722 ns, native total: 1058644 ns
+[BENCH/IO] Iteration: 555
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 260 ns, transfer: 240 ns, record total: 500 ns, native total: 6426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 315 ns, transfer: 148 ns, record total: 463 ns, native total: 1056 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 185 ns, transfer: 149 ns, record total: 334 ns, native total: 1149 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 186 ns, transfer: 148 ns, record total: 334 ns, native total: 3334 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 148 ns, transfer: 260 ns, record total: 408 ns, native total: 926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 334 ns, transfer: 852 ns, record total: 1186 ns, native total: 5203183 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 278 ns, record total: 500 ns, native total: 3148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 352 ns, transfer: 352 ns, record total: 704 ns, native total: 1059126 ns
+[BENCH/IO] Iteration: 556
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 259 ns, record total: 444 ns, native total: 6778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 315 ns, transfer: 222 ns, record total: 537 ns, native total: 1407 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 185 ns, transfer: 222 ns, record total: 407 ns, native total: 1426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 223 ns, record total: 408 ns, native total: 3686 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 148 ns, transfer: 167 ns, record total: 315 ns, native total: 926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 537 ns, transfer: 704 ns, record total: 1241 ns, native total: 9432315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 260 ns, transfer: 185 ns, record total: 445 ns, native total: 3056 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 204 ns, transfer: 315 ns, record total: 519 ns, native total: 1057385 ns
+[BENCH/IO] Iteration: 557
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 222 ns, transfer: 315 ns, record total: 537 ns, native total: 6204 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 408 ns, transfer: 148 ns, record total: 556 ns, native total: 1148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 166 ns, transfer: 241 ns, record total: 407 ns, native total: 1296 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 167 ns, record total: 352 ns, native total: 3037 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 167 ns, record total: 297 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 482 ns, transfer: 370 ns, record total: 852 ns, native total: 5206127 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 278 ns, transfer: 148 ns, record total: 426 ns, native total: 2870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 555 ns, transfer: 445 ns, record total: 1000 ns, native total: 1058478 ns
+[BENCH/IO] Iteration: 558
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 333 ns, transfer: 149 ns, record total: 482 ns, native total: 5908 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 166 ns, record total: 444 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 167 ns, record total: 315 ns, native total: 2186 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 222 ns, record total: 407 ns, native total: 3037 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 148 ns, transfer: 129 ns, record total: 277 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 297 ns, transfer: 296 ns, record total: 593 ns, native total: 8869733 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 2148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 296 ns, transfer: 315 ns, record total: 611 ns, native total: 1056329 ns
+[BENCH/IO] Iteration: 559
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 222 ns, transfer: 315 ns, record total: 537 ns, native total: 5926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 500 ns, transfer: 167 ns, record total: 667 ns, native total: 1056 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 222 ns, transfer: 223 ns, record total: 445 ns, native total: 1130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 2370 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 204 ns, record total: 333 ns, native total: 796 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 315 ns, transfer: 407 ns, record total: 722 ns, native total: 4388097 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 259 ns, record total: 389 ns, native total: 2648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 296 ns, transfer: 297 ns, record total: 593 ns, native total: 1057330 ns
+[BENCH/IO] Iteration: 560
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 222 ns, transfer: 260 ns, record total: 482 ns, native total: 8704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 204 ns, record total: 463 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 259 ns, transfer: 148 ns, record total: 407 ns, native total: 1111 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 167 ns, record total: 352 ns, native total: 2519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 149 ns, transfer: 222 ns, record total: 371 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 481 ns, transfer: 704 ns, record total: 1185 ns, native total: 6225271 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 259 ns, transfer: 148 ns, record total: 407 ns, native total: 2463 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 352 ns, transfer: 389 ns, record total: 741 ns, native total: 1058126 ns
+[BENCH/IO] Iteration: 561
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 222 ns, transfer: 315 ns, record total: 537 ns, native total: 5871 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 296 ns, transfer: 149 ns, record total: 445 ns, native total: 871 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 149 ns, transfer: 222 ns, record total: 371 ns, native total: 1185 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 2612 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 481 ns, transfer: 426 ns, record total: 907 ns, native total: 4714565 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 148 ns, record total: 370 ns, native total: 2259 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 315 ns, record total: 500 ns, native total: 1056181 ns
+[BENCH/IO] Iteration: 562
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 186 ns, transfer: 296 ns, record total: 482 ns, native total: 5389 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 204 ns, transfer: 167 ns, record total: 371 ns, native total: 815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 166 ns, transfer: 148 ns, record total: 314 ns, native total: 1129 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 2537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 703 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 408 ns, transfer: 481 ns, record total: 889 ns, native total: 4836640 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 259 ns, transfer: 93 ns, record total: 352 ns, native total: 2093 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 296 ns, record total: 481 ns, native total: 1057033 ns
+[BENCH/IO] Iteration: 563
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 260 ns, transfer: 314 ns, record total: 574 ns, native total: 4648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 222 ns, transfer: 149 ns, record total: 371 ns, native total: 649 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 204 ns, record total: 352 ns, native total: 1148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 2519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 149 ns, transfer: 148 ns, record total: 297 ns, native total: 834 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 296 ns, transfer: 463 ns, record total: 759 ns, native total: 7058671 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 240 ns, transfer: 111 ns, record total: 351 ns, native total: 2351 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 315 ns, transfer: 315 ns, record total: 630 ns, native total: 1057163 ns
+[BENCH/IO] Iteration: 564
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 4519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 222 ns, transfer: 167 ns, record total: 389 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 1889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 1926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 222 ns, record total: 352 ns, native total: 667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 407 ns, transfer: 500 ns, record total: 907 ns, native total: 8141704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 241 ns, transfer: 296 ns, record total: 537 ns, native total: 3722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 223 ns, transfer: 333 ns, record total: 556 ns, native total: 1056570 ns
+[BENCH/IO] Iteration: 565
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 389 ns, transfer: 185 ns, record total: 574 ns, native total: 5370 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 204 ns, transfer: 166 ns, record total: 370 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 982 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 3166 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 371 ns, transfer: 333 ns, record total: 704 ns, native total: 5309573 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 111 ns, record total: 222 ns, native total: 2129 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 259 ns, record total: 426 ns, native total: 1056181 ns
+[BENCH/IO] Iteration: 566
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 3889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 204 ns, transfer: 148 ns, record total: 352 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 2314 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 260 ns, transfer: 444 ns, record total: 704 ns, native total: 5715430 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 352 ns, transfer: 92 ns, record total: 444 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 186 ns, transfer: 277 ns, record total: 463 ns, native total: 1055699 ns
+[BENCH/IO] Iteration: 567
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 5037 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 204 ns, transfer: 129 ns, record total: 333 ns, native total: 777 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 203 ns, record total: 333 ns, native total: 944 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 204 ns, record total: 352 ns, native total: 2111 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 556 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 260 ns, transfer: 648 ns, record total: 908 ns, native total: 6361736 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 241 ns, record total: 463 ns, native total: 2297 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 259 ns, transfer: 260 ns, record total: 519 ns, native total: 1055922 ns
+[BENCH/IO] Iteration: 568
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 222 ns, transfer: 130 ns, record total: 352 ns, native total: 593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 982 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 2667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 629 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 315 ns, transfer: 797 ns, record total: 1112 ns, native total: 5792543 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 2852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 222 ns, transfer: 259 ns, record total: 481 ns, native total: 1058422 ns
+[BENCH/IO] Iteration: 569
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 222 ns, transfer: 185 ns, record total: 407 ns, native total: 6704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 111 ns, record total: 370 ns, native total: 945 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 129 ns, record total: 277 ns, native total: 1814 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 278 ns, transfer: 130 ns, record total: 408 ns, native total: 3519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 777 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 278 ns, transfer: 537 ns, record total: 815 ns, native total: 4573563 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 111 ns, record total: 222 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 1055736 ns
+[BENCH/IO] Iteration: 570
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 148 ns, record total: 314 ns, native total: 4852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 389 ns, transfer: 130 ns, record total: 519 ns, native total: 908 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 185 ns, record total: 333 ns, native total: 1722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 2074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 629 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 222 ns, transfer: 555 ns, record total: 777 ns, native total: 7535474 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 2111 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 259 ns, record total: 407 ns, native total: 1055848 ns
+[BENCH/IO] Iteration: 571
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 185 ns, record total: 370 ns, native total: 3648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 129 ns, record total: 407 ns, native total: 629 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 1241 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 259 ns, transfer: 129 ns, record total: 388 ns, native total: 2407 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 334 ns, transfer: 666 ns, record total: 1000 ns, native total: 7713587 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 2092 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1055589 ns
+[BENCH/IO] Iteration: 572
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 148 ns, transfer: 297 ns, record total: 445 ns, native total: 5130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 148 ns, record total: 408 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 185 ns, record total: 315 ns, native total: 945 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 259 ns, transfer: 167 ns, record total: 426 ns, native total: 2297 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 167 ns, record total: 296 ns, native total: 556 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 407 ns, transfer: 334 ns, record total: 741 ns, native total: 4438876 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 111 ns, record total: 333 ns, native total: 1815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 241 ns, record total: 408 ns, native total: 1055219 ns
+[BENCH/IO] Iteration: 573
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 111 ns, record total: 296 ns, native total: 4778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 148 ns, record total: 408 ns, native total: 778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 167 ns, record total: 315 ns, native total: 2611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 185 ns, record total: 315 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 130 ns, transfer: 204 ns, record total: 334 ns, native total: 5123941 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 166 ns, transfer: 260 ns, record total: 426 ns, native total: 1055774 ns
+[BENCH/IO] Iteration: 574
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 4074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 277 ns, transfer: 130 ns, record total: 407 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 1037 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 2000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 444 ns, transfer: 445 ns, record total: 889 ns, native total: 5262258 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 2037 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 1056182 ns
+[BENCH/IO] Iteration: 575
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 112 ns, record total: 278 ns, native total: 4686 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 93 ns, record total: 371 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 149 ns, record total: 278 ns, native total: 982 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 2315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 352 ns, transfer: 259 ns, record total: 611 ns, native total: 5118200 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 1833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1055274 ns
+[BENCH/IO] Iteration: 576
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 240 ns, transfer: 149 ns, record total: 389 ns, native total: 649 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 1982 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 2315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 296 ns, transfer: 315 ns, record total: 611 ns, native total: 6341068 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 260 ns, transfer: 370 ns, record total: 630 ns, native total: 1055829 ns
+[BENCH/IO] Iteration: 577
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4167 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 148 ns, record total: 389 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 129 ns, record total: 296 ns, native total: 1815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 259 ns, transfer: 593 ns, record total: 852 ns, native total: 7032616 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 111 ns, record total: 222 ns, native total: 1741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 259 ns, record total: 407 ns, native total: 1055366 ns
+[BENCH/IO] Iteration: 578
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4407 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 92 ns, record total: 352 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 93 ns, record total: 241 ns, native total: 2111 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 425 ns, transfer: 612 ns, record total: 1037 ns, native total: 9647707 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 112 ns, record total: 223 ns, native total: 2686 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 260 ns, transfer: 277 ns, record total: 537 ns, native total: 1056347 ns
+[BENCH/IO] Iteration: 579
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 149 ns, record total: 334 ns, native total: 5445 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 185 ns, record total: 463 ns, native total: 815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 222 ns, record total: 352 ns, native total: 1204 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 2537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 666 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 426 ns, transfer: 333 ns, record total: 759 ns, native total: 5182053 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 1055607 ns
+[BENCH/IO] Iteration: 580
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 148 ns, transfer: 149 ns, record total: 297 ns, native total: 3963 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 148 ns, record total: 426 ns, native total: 686 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 723 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 149 ns, transfer: 129 ns, record total: 278 ns, native total: 2000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 649 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 129 ns, transfer: 575 ns, record total: 704 ns, native total: 9947285 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 240 ns, transfer: 111 ns, record total: 351 ns, native total: 2277 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 277 ns, record total: 425 ns, native total: 1055903 ns
+[BENCH/IO] Iteration: 581
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 185 ns, record total: 444 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 2352 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 167 ns, record total: 296 ns, native total: 796 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 370 ns, transfer: 630 ns, record total: 1000 ns, native total: 12322503 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 371 ns, transfer: 148 ns, record total: 519 ns, native total: 2593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 277 ns, transfer: 278 ns, record total: 555 ns, native total: 1056329 ns
+[BENCH/IO] Iteration: 582
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 5389 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 555 ns, transfer: 204 ns, record total: 759 ns, native total: 1130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 1907 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 149 ns, record total: 297 ns, native total: 2797 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 314 ns, transfer: 408 ns, record total: 722 ns, native total: 5052792 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 259 ns, record total: 444 ns, native total: 1056959 ns
+[BENCH/IO] Iteration: 583
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 5408 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 204 ns, record total: 463 ns, native total: 797 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 203 ns, record total: 333 ns, native total: 851 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 149 ns, transfer: 148 ns, record total: 297 ns, native total: 2574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 500 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 167 ns, transfer: 315 ns, record total: 482 ns, native total: 5165071 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 112 ns, record total: 223 ns, native total: 1537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 297 ns, record total: 445 ns, native total: 1056348 ns
+[BENCH/IO] Iteration: 584
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 167 ns, record total: 352 ns, native total: 4593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 315 ns, transfer: 129 ns, record total: 444 ns, native total: 814 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 982 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 149 ns, transfer: 333 ns, record total: 482 ns, native total: 2426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 629 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 278 ns, transfer: 296 ns, record total: 574 ns, native total: 6134047 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 2296 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1054941 ns
+[BENCH/IO] Iteration: 585
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 4445 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 129 ns, record total: 388 ns, native total: 666 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 240 ns, transfer: 130 ns, record total: 370 ns, native total: 833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 149 ns, record total: 297 ns, native total: 2093 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 167 ns, transfer: 389 ns, record total: 556 ns, native total: 6047990 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 240 ns, transfer: 112 ns, record total: 352 ns, native total: 2297 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 259 ns, transfer: 278 ns, record total: 537 ns, native total: 1055904 ns
+[BENCH/IO] Iteration: 586
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 222 ns, record total: 389 ns, native total: 4315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 241 ns, transfer: 129 ns, record total: 370 ns, native total: 1129 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 129 ns, record total: 296 ns, native total: 2092 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 203 ns, transfer: 260 ns, record total: 463 ns, native total: 6233623 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 1797 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 296 ns, record total: 463 ns, native total: 1055052 ns
+[BENCH/IO] Iteration: 587
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 185 ns, record total: 352 ns, native total: 4426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 148 ns, record total: 389 ns, native total: 815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 1833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 7146098 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 1704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 149 ns, transfer: 277 ns, record total: 426 ns, native total: 1055273 ns
+[BENCH/IO] Iteration: 588
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 5019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 1778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 1722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 555 ns, transfer: 500 ns, record total: 1055 ns, native total: 8891585 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 2222 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 203 ns, transfer: 278 ns, record total: 481 ns, native total: 1057051 ns
+[BENCH/IO] Iteration: 589
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 204 ns, transfer: 222 ns, record total: 426 ns, native total: 5482 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 148 ns, record total: 407 ns, native total: 833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 260 ns, transfer: 129 ns, record total: 389 ns, native total: 2463 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 185 ns, record total: 315 ns, native total: 611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 130 ns, transfer: 277 ns, record total: 407 ns, native total: 4611341 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 93 ns, record total: 315 ns, native total: 1519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 186 ns, transfer: 277 ns, record total: 463 ns, native total: 1055718 ns
+[BENCH/IO] Iteration: 590
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 482 ns, transfer: 129 ns, record total: 611 ns, native total: 9000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 297 ns, transfer: 204 ns, record total: 501 ns, native total: 945 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 149 ns, transfer: 129 ns, record total: 278 ns, native total: 4518 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 241 ns, record total: 389 ns, native total: 4764640 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 1315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 204 ns, record total: 371 ns, native total: 1055422 ns
+[BENCH/IO] Iteration: 591
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 259 ns, record total: 444 ns, native total: 4278 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 167 ns, record total: 426 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 166 ns, record total: 296 ns, native total: 889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 1981 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 277 ns, transfer: 389 ns, record total: 666 ns, native total: 5227516 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 2129 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1055126 ns
+[BENCH/IO] Iteration: 592
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 130 ns, record total: 315 ns, native total: 3981 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 148 ns, record total: 389 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 1667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 112 ns, transfer: 111 ns, record total: 223 ns, native total: 519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 371 ns, transfer: 407 ns, record total: 778 ns, native total: 5603133 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 240 ns, transfer: 112 ns, record total: 352 ns, native total: 1723 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1055311 ns
+[BENCH/IO] Iteration: 593
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 167 ns, record total: 334 ns, native total: 4667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 130 ns, record total: 371 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 149 ns, transfer: 185 ns, record total: 334 ns, native total: 1760 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 167 ns, transfer: 407 ns, record total: 574 ns, native total: 5347907 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 223 ns, transfer: 92 ns, record total: 315 ns, native total: 1740 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 185 ns, record total: 352 ns, native total: 1014199 ns
+[BENCH/IO] Iteration: 594
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 240 ns, transfer: 130 ns, record total: 370 ns, native total: 704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 241 ns, transfer: 129 ns, record total: 370 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 2333 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 519 ns
+[LM/Checkpoint] Batched 6 events in 548 bytes
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 296 ns, transfer: 334 ns, record total: 630 ns, native total: 9251350 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 204 ns, transfer: 278 ns, record total: 482 ns, native total: 2297 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 1055181 ns
+[BENCH/IO] Iteration: 595
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 222 ns, record total: 389 ns, native total: 4315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 186 ns, record total: 445 ns, native total: 723 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 296 ns, record total: 426 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 130 ns, transfer: 204 ns, record total: 334 ns, native total: 1760 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 260 ns, record total: 389 ns, native total: 760 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 278 ns, transfer: 259 ns, record total: 537 ns, native total: 7004615 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 148 ns, record total: 370 ns, native total: 1574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 277 ns, record total: 444 ns, native total: 1055422 ns
+[BENCH/IO] Iteration: 596
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 149 ns, transfer: 148 ns, record total: 297 ns, native total: 3371 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 129 ns, record total: 370 ns, native total: 703 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 944 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 352 ns, transfer: 481 ns, record total: 833 ns, native total: 7525973 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 223 ns, transfer: 166 ns, record total: 389 ns, native total: 2166 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 1055811 ns
+[BENCH/IO] Iteration: 597
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 5074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 129 ns, record total: 388 ns, native total: 888 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 167 ns, record total: 334 ns, native total: 2463 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 555 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 296 ns, transfer: 278 ns, record total: 574 ns, native total: 4392579 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 278 ns, record total: 408 ns, native total: 2056 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 277 ns, record total: 444 ns, native total: 1055662 ns
+[BENCH/IO] Iteration: 598
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 4130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 111 ns, record total: 371 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 1204 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 2038 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 222 ns, record total: 352 ns, native total: 629 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 260 ns, transfer: 463 ns, record total: 723 ns, native total: 4447524 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 112 ns, record total: 241 ns, native total: 3112 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 315 ns, record total: 463 ns, native total: 1054996 ns
+[BENCH/IO] Iteration: 599
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 149 ns, record total: 334 ns, native total: 4204 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 240 ns, transfer: 130 ns, record total: 370 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 2222 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 352 ns, transfer: 407 ns, record total: 759 ns, native total: 5380500 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 1667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 259 ns, record total: 426 ns, native total: 1055163 ns
+[BENCH/IO] Iteration: 600
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 4223 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 1926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 2186 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 555 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 389 ns, transfer: 259 ns, record total: 648 ns, native total: 7496492 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 1759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1055089 ns
+[BENCH/IO] Iteration: 601
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 204 ns, transfer: 259 ns, record total: 463 ns, native total: 4333 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 185 ns, record total: 426 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 167 ns, record total: 297 ns, native total: 945 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 1759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 167 ns, record total: 297 ns, native total: 574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 408 ns, transfer: 241 ns, record total: 649 ns, native total: 5145441 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1407 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 166 ns, transfer: 204 ns, record total: 370 ns, native total: 1055589 ns
+[BENCH/IO] Iteration: 602
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 3870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 148 ns, record total: 389 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 167 ns, record total: 333 ns, native total: 1926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 204 ns, record total: 334 ns, native total: 611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 741 ns, transfer: 352 ns, record total: 1093 ns, native total: 9038180 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 315 ns, transfer: 111 ns, record total: 426 ns, native total: 2074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 259 ns, transfer: 278 ns, record total: 537 ns, native total: 1055404 ns
+[BENCH/IO] Iteration: 603
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 4019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 129 ns, record total: 370 ns, native total: 740 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 203 ns, record total: 333 ns, native total: 1111 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 204 ns, record total: 352 ns, native total: 2538 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 352 ns, transfer: 296 ns, record total: 648 ns, native total: 5882766 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 222 ns, transfer: 148 ns, record total: 370 ns, native total: 2315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1055385 ns
+[BENCH/IO] Iteration: 604
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 149 ns, record total: 278 ns, native total: 871 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 2130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 352 ns, transfer: 333 ns, record total: 685 ns, native total: 6303994 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 241 ns, transfer: 92 ns, record total: 333 ns, native total: 1815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 1055589 ns
+[BENCH/IO] Iteration: 605
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 204 ns, transfer: 148 ns, record total: 352 ns, native total: 4333 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 649 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 1203 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 2149 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 112 ns, transfer: 129 ns, record total: 241 ns, native total: 518 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 259 ns, transfer: 260 ns, record total: 519 ns, native total: 4029593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 2722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 1055496 ns
+[BENCH/IO] Iteration: 606
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 4278 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 1759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 129 ns, record total: 296 ns, native total: 1889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 389 ns, transfer: 648 ns, record total: 1037 ns, native total: 8040759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1908 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 277 ns, record total: 444 ns, native total: 1055551 ns
+[BENCH/IO] Iteration: 607
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 296 ns, record total: 481 ns, native total: 4685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 240 ns, transfer: 148 ns, record total: 388 ns, native total: 777 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 166 ns, record total: 296 ns, native total: 889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 167 ns, record total: 333 ns, native total: 2315 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 167 ns, record total: 296 ns, native total: 574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 370 ns, transfer: 334 ns, record total: 704 ns, native total: 4203762 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 1055885 ns
+[BENCH/IO] Iteration: 608
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 111 ns, record total: 296 ns, native total: 3963 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 129 ns, record total: 389 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 129 ns, record total: 296 ns, native total: 1870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 297 ns, transfer: 481 ns, record total: 778 ns, native total: 8619322 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 167 ns, record total: 296 ns, native total: 2593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 259 ns, transfer: 260 ns, record total: 519 ns, native total: 1056645 ns
+[BENCH/IO] Iteration: 609
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 186 ns, record total: 352 ns, native total: 5019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 130 ns, record total: 408 ns, native total: 778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 1648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 2297 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 871 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 445 ns, transfer: 481 ns, record total: 926 ns, native total: 5828265 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 1722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 945 ns, transfer: 500 ns, record total: 1445 ns, native total: 1060811 ns
+[BENCH/IO] Iteration: 610
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 16890 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 334 ns, transfer: 129 ns, record total: 463 ns, native total: 1148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 1314 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 149 ns, transfer: 129 ns, record total: 278 ns, native total: 2704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 148 ns, record total: 277 ns, native total: 555 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 352 ns, transfer: 666 ns, record total: 1018 ns, native total: 7853533 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 112 ns, record total: 241 ns, native total: 2130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 1055867 ns
+[BENCH/IO] Iteration: 611
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 204 ns, record total: 389 ns, native total: 5426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 277 ns, transfer: 111 ns, record total: 388 ns, native total: 796 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 2797 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 277 ns, transfer: 371 ns, record total: 648 ns, native total: 5183201 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 166 ns, transfer: 278 ns, record total: 444 ns, native total: 1055681 ns
+[BENCH/IO] Iteration: 612
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 149 ns, transfer: 129 ns, record total: 278 ns, native total: 3926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 148 ns, record total: 408 ns, native total: 667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 241 ns, transfer: 129 ns, record total: 370 ns, native total: 1981 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 2074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 629 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 240 ns, transfer: 297 ns, record total: 537 ns, native total: 6137159 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 130 ns, record total: 241 ns, native total: 2778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 296 ns, record total: 463 ns, native total: 1056089 ns
+[BENCH/IO] Iteration: 613
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 296 ns, record total: 481 ns, native total: 4777 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 204 ns, record total: 463 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 223 ns, record total: 352 ns, native total: 1093 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 204 ns, record total: 352 ns, native total: 2370 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 204 ns, record total: 333 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 389 ns, transfer: 389 ns, record total: 778 ns, native total: 6907429 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 223 ns, record total: 352 ns, native total: 2112 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 297 ns, transfer: 259 ns, record total: 556 ns, native total: 1056237 ns
+[BENCH/IO] Iteration: 614
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 148 ns, transfer: 185 ns, record total: 333 ns, native total: 4537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 148 ns, record total: 389 ns, native total: 778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 870 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 2167 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 129 ns, record total: 240 ns, native total: 518 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 241 ns, transfer: 481 ns, record total: 722 ns, native total: 6231956 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 260 ns, record total: 408 ns, native total: 1054922 ns
+[BENCH/IO] Iteration: 615
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 204 ns, transfer: 296 ns, record total: 500 ns, native total: 4722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 222 ns, record total: 352 ns, native total: 1074 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 2241 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 463 ns, transfer: 241 ns, record total: 704 ns, native total: 8078722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 1889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 388 ns, transfer: 334 ns, record total: 722 ns, native total: 1058626 ns
+[BENCH/IO] Iteration: 616
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 167 ns, record total: 333 ns, native total: 6037 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 111 ns, record total: 371 ns, native total: 908 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 222 ns, transfer: 148 ns, record total: 370 ns, native total: 1222 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 2537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 111 ns, transfer: 148 ns, record total: 259 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 241 ns, transfer: 500 ns, record total: 741 ns, native total: 7366361 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 111 ns, record total: 222 ns, native total: 2222 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 1055626 ns
+[BENCH/IO] Iteration: 617
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 5111 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 92 ns, record total: 351 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 1019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 2093 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 93 ns, record total: 222 ns, native total: 593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 277 ns, transfer: 389 ns, record total: 666 ns, native total: 3922813 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 167 ns, transfer: 389 ns, record total: 556 ns, native total: 3222 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 241 ns, record total: 408 ns, native total: 1056385 ns
+[BENCH/IO] Iteration: 618
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 4889 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 240 ns, transfer: 130 ns, record total: 370 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 333 ns, transfer: 167 ns, record total: 500 ns, native total: 2000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 166 ns, record total: 333 ns, native total: 2240 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 167 ns, record total: 297 ns, native total: 575 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 463 ns, record total: 611 ns, native total: 5378703 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 111 ns, record total: 240 ns, native total: 2426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 241 ns, transfer: 278 ns, record total: 519 ns, native total: 1057219 ns
+[BENCH/IO] Iteration: 619
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 278 ns, transfer: 148 ns, record total: 426 ns, native total: 5389 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 333 ns, transfer: 92 ns, record total: 425 ns, native total: 814 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 204 ns, transfer: 129 ns, record total: 333 ns, native total: 1500 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 167 ns, record total: 333 ns, native total: 2389 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 815 ns, transfer: 408 ns, record total: 1223 ns, native total: 5279332 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 500 ns, transfer: 130 ns, record total: 630 ns, native total: 3611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 1057867 ns
+[BENCH/IO] Iteration: 620
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 185 ns, record total: 352 ns, native total: 5408 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 1093 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 92 ns, record total: 259 ns, native total: 1666 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 259 ns, transfer: 574 ns, record total: 833 ns, native total: 5814209 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 2333 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 277 ns, record total: 444 ns, native total: 1057255 ns
+[BENCH/IO] Iteration: 621
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 3648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 129 ns, record total: 389 ns, native total: 611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 167 ns, record total: 296 ns, native total: 926 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 130 ns, record total: 296 ns, native total: 2130 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 260 ns, transfer: 444 ns, record total: 704 ns, native total: 6428681 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 2167 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 166 ns, transfer: 260 ns, record total: 426 ns, native total: 1056256 ns
+[BENCH/IO] Iteration: 622
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 5278 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 260 ns, transfer: 129 ns, record total: 389 ns, native total: 852 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 222 ns, transfer: 148 ns, record total: 370 ns, native total: 1148 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 166 ns, transfer: 111 ns, record total: 277 ns, native total: 2166 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 630 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 463 ns, transfer: 445 ns, record total: 908 ns, native total: 8870159 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 93 ns, record total: 223 ns, native total: 1778 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 278 ns, record total: 445 ns, native total: 1056311 ns
+[BENCH/IO] Iteration: 623
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 166 ns, record total: 351 ns, native total: 4833 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 241 ns, transfer: 129 ns, record total: 370 ns, native total: 704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 1018 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 2815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 1092 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 314 ns, transfer: 352 ns, record total: 666 ns, native total: 7201599 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 112 ns, record total: 241 ns, native total: 1797 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 223 ns, transfer: 296 ns, record total: 519 ns, native total: 1058366 ns
+[BENCH/IO] Iteration: 624
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 278 ns, transfer: 130 ns, record total: 408 ns, native total: 5204 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 1000 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 240 ns, transfer: 93 ns, record total: 333 ns, native total: 2019 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 3018 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 149 ns, record total: 278 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 334 ns, transfer: 296 ns, record total: 630 ns, native total: 5807728 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 111 ns, record total: 241 ns, native total: 1593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 370 ns, transfer: 278 ns, record total: 648 ns, native total: 1057625 ns
+[BENCH/IO] Iteration: 625
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 315 ns, transfer: 166 ns, record total: 481 ns, native total: 8463 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 278 ns, transfer: 130 ns, record total: 408 ns, native total: 871 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 1426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 2648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 5035421 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 1519 ns
+[LM/Checkpoint] Linear memory transmitted after 555.950684 ms
+[LM/Checkpoint] Wrote stack and shadow stack frames to stream (frame count: 6, frame offset: 948)
+[LM/Checkpoint] Frames transmitted after 0.009277 ms
+[LM/Checkpoint] Capturing the UDP state took 0.002000 ms (fd: 0, port: 0)
+[LM/Checkpoint] Initial full linear memory handover duration 49.082000 ms
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 445 ns, transfer: 278 ns, record total: 723 ns, native total: 1058237 ns
+[BENCH/IO] Iteration: 626
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 315 ns, transfer: 148 ns, record total: 463 ns, native total: 5685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 259 ns, transfer: 130 ns, record total: 389 ns, native total: 815 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 241 ns, transfer: 130 ns, record total: 371 ns, native total: 1093 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 130 ns, record total: 297 ns, native total: 2463 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 741 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 167 ns, transfer: 240 ns, record total: 407 ns, native total: 5742505 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 129 ns, transfer: 149 ns, record total: 278 ns, native total: 2389 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 1054978 ns
+[BENCH/IO] Iteration: 627
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 167 ns, record total: 352 ns, native total: 3704 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 149 ns, transfer: 129 ns, record total: 278 ns, native total: 555 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 130 ns, record total: 278 ns, native total: 1593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 371 ns, record total: 519 ns, native total: 4416357 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 1500 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 241 ns, record total: 408 ns, native total: 1054959 ns
+[BENCH/IO] Iteration: 628
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 3759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 129 ns, transfer: 149 ns, record total: 278 ns, native total: 908 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 148 ns, record total: 315 ns, native total: 2352 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 130 ns, record total: 259 ns, native total: 537 ns
+[LM/Checkpoint] Flushing 0 bytes of buffered membrane events...
+[LM/Checkpoint] Received 0xEOF_RECONSTRUCT, halting execution for final handover (1785844133742.881592 ms)...
+[LM/Checkpoint] Migration server completed its tasks
+[LM/Checkpoint] Initial membrane chunk transmitted after 18.419922 ms
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 241 ns, transfer: 241 ns, record total: 482 ns, native total: 8101519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 111 ns, record total: 222 ns, native total: 1389 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 186 ns, transfer: 5185 ns, record total: 5371 ns, native total: 1059515 ns
+[BENCH/IO] Iteration: 629
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 204 ns, transfer: 148 ns, record total: 352 ns, native total: 3574 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 556 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 722 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 129 ns, transfer: 149 ns, record total: 278 ns, native total: 1482 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 555 ns
+[LM/Checkpoint] Trying to converge membrane replay log...
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 260 ns, record total: 408 ns, native total: 6612739 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 92 ns, record total: 222 ns, native total: 1426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 148 ns, transfer: 260 ns, record total: 408 ns, native total: 1054645 ns
+[BENCH/IO] Iteration: 630
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 185 ns, transfer: 278 ns, record total: 463 ns, native total: 3334 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 148 ns, transfer: 222 ns, record total: 370 ns, native total: 648 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 222 ns, record total: 352 ns, native total: 1611 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 148 ns, transfer: 204 ns, record total: 352 ns, native total: 1500 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 129 ns, transfer: 352 ns, record total: 481 ns, native total: 759 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 166 ns, transfer: 260 ns, record total: 426 ns, native total: 8842511 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 130 ns, transfer: 130 ns, record total: 260 ns, native total: 1278 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 167 ns, transfer: 259 ns, record total: 426 ns, native total: 1054959 ns
+[BENCH/IO] Iteration: 631
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 278 ns, record total: 444 ns, native total: 2666 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 148 ns, transfer: 129 ns, record total: 277 ns, native total: 537 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 556 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 167 ns, transfer: 167 ns, record total: 334 ns, native total: 1519 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 129 ns, record total: 259 ns, native total: 555 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_sync((i)i) record: 148 ns, transfer: 278 ns, record total: 426 ns, native total: 5904896 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.sched_yield(()i) record: 111 ns, transfer: 111 ns, record total: 222 ns, native total: 1370 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.poll_oneoff((**i*)i) record: 166 ns, transfer: 297 ns, record total: 463 ns, native total: 1055941 ns
+[BENCH/IO] Iteration: 632
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_write((i*i*)i) record: 166 ns, transfer: 149 ns, record total: 315 ns, native total: 3426 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.clock_time_get((iI*)i) record: 166 ns, transfer: 149 ns, record total: 315 ns, native total: 593 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.random_get((*~)i) record: 148 ns, transfer: 148 ns, record total: 296 ns, native total: 685 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_filestat_get((i*)i) record: 185 ns, transfer: 148 ns, record total: 333 ns, native total: 1667 ns
+[MICROBENCH/RECORD] wasi_snapshot_preview1.fd_tell((i*)i) record: 130 ns, transfer: 148 ns, record total: 278 ns, native total: 574 ns
+[LM/Checkpoint] Converged naturally! Lag: 247 events (21.615967 ms).
+[LM/Checkpoint] Migration client completed its tasks
+[LM/Checkpoint] Transmitted 647 membrane events
+[LM/Checkpoint] Migration completed in 608.105469 ms
+[LM/Checkpoint] Live migration completed at 1785844133775.652344 ms.
+[LM/Checkpoint] Closing migration connections...
+[LM/Checkpoint] Closed all migration connections!

@@ -1,0 +1,2 @@
+Handovers,MigrationInitiations,MigrationCompletions,MigrationRestorations,ReplayCountSamples,SequenceGaps,DuplicateSequences,DuplicateSequenceConflicts,ReplayCountTotal,ReplayCountMedian,ReplayCountP5,ReplayCountP95,ReplayCountMax,ReplayCountMin,HashChainMismatches
+83,84,84,83,84,0,0,0,148513,1772.0,1735.15,1790.0,1799,1727,0

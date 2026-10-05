@@ -1,0 +1,33 @@
+[LM] Starting migration server on port 8010 in background...
+[LM] Server waiting for connection on port 8010...
+[WASM] Options: Allocating 256 MB | Rate: 10 MB/s | Step: 10 ms (0.10 MB/iter)
+[WASM] Writing initial test patterns to all 256 MB of pages...
+[WASM] Memory initialized. Starting loop with 10 MB updates per second...
+[WASM] Iteration 0 | Dirtied 0.10 MB @ offset 0 MB (Integrity: OK)
+[WASM] Iteration 100 | Dirtied 0.10 MB @ offset 9 MB (Integrity: OK)
+[WASM] Iteration 200 | Dirtied 0.10 MB @ offset 19 MB (Integrity: OK)
+[WASM] Iteration 300 | Dirtied 0.10 MB @ offset 29 MB (Integrity: OK)
+[WASM] Iteration 400 | Dirtied 0.10 MB @ offset 39 MB (Integrity: OK)
+[WASM] Iteration 500 | Dirtied 0.10 MB @ offset 49 MB (Integrity: OK)
+[LM] Client connected. Migration is initiated (1785172884921.374512 ms)...
+[LM] Phase 1: Sending initial bulk memory (256 MB)...
+[WASM] Iteration 600 | Dirtied 0.10 MB @ offset 59 MB (Integrity: OK)
+[WASM] Iteration 700 | Dirtied 0.10 MB @ offset 69 MB (Integrity: OK)
+[LM] Initial pre-copy of bulk memory completed. Took 2306.165771 ms
+[LM] Phase 1.5: Starting incremental pre-copy...
+[LM] Number of dirty cards transmitted: 46905
+[LM] Pre-copy Iteration 1: Sent 24015360 bytes.
+[LM] Number of dirty cards transmitted: 4306
+[LM] Pre-copy Iteration 2: Sent 2204672 bytes.
+[LM] Pre-copy threshold reached. Moving to final handover.
+[LM] Incremental pre-copy completed. Took 231.155762 ms
+[LM] Bulk + Precopy duration 159.204000 ms
+[LM] Received 0xEOF_RECONSTRUCT, halting execution for final handover...
+[LM/Checkpoint] Migration triggered! Dumping state...
+[LM/Checkpoint] State synced to frame structures.
+[LM] Phase 2: Sending final dirty pages and context...
+[LM] Number of dirty cards transmitted: 1029
+[LM] Send final dirty pages took 2.709000 ms
+[LM] Checkpoint dirty state took 0.063000 ms
+[LM/Checkpoint] Live migration completed at 1785172887496.768555 ms. Migration took 2575.394043 ms
+[LM/Checkpoint] Took 2.914000 ms to checkpoint application

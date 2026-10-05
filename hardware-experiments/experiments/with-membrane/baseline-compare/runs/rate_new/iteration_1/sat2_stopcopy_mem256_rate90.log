@@ -1,0 +1,23 @@
+[LM] Connecting to migration server 192.168.10.11:8010...
+[LM/Restore] Connected to migration server 192.168.10.11:8010
+[LM/Restore] State metadata loaded
+[LM/Restore] Had to enlarge linear memory for migration
+[LM/Restore] Linear memory loaded
+[LM/Restore] Stack and shadow stack metadata loaded (frame count: 7, frame offset: 2888)
+[LM/Restore] State restored
+[LM/Restore] Initial state has been reconstructed (1785244081118.143066 ms).
+[LM/Checkpoint] Migration server completed its tasks (1785244081125.676758 ms)
+[LM/Checkpoint] Migration client completed its tasks (1785244081125.686035 ms)
+[LM/Restore] State restoration complete (1785244081125.703125 ms).
+[LM] Starting migration server on port 8010 in background...
+[LM] Migration server started (1785244081125.792969 ms).
+[LM/Restore] Re-entering interpreter loop...
+[LM/Resume] exec_env=0x5556680e71c0 cur_frame=0x5556680ec9c0 module_inst=0x5556680e5a80 function=0x5556680e6400 prev_frame=0x5556680ec8b4 ip=0x7ffecbe931f8 (offset=14, is_import=0) 1785244081125.803223 ms
+[LM/Resume] New function array base=0x5556680e5ef0 count=88
+[LM/Resume] Took 0.007000 ms to restore application
+[LM/Resume] Resuming bytecode function (1785244081125.810547)
+[LM] Server waiting for connection on port 8010...
+[WASM] Iteration 800 | Dirtied 0.90 MB @ offset 209 MB (Integrity: OK)
+[WASM] Iteration 900 | Dirtied 0.90 MB @ offset 44 MB (Integrity: OK)
+[WASM] Iteration 1000 | Dirtied 0.90 MB @ offset 134 MB (Integrity: OK)
+[WASM] Iteration 1100 | Dirtied 0.90 MB @ offset 224 MB (Integrity: OK)

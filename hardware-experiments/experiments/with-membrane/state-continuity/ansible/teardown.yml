@@ -1,0 +1,19 @@
+---
+- name: Cleanup satellites
+  hosts: satellites
+  become: true
+  tasks:
+    - name: Kill applications
+      ansible.builtin.command: >
+        pkill -2 -f benchmark.wasm
+      ignore_errors: true
+
+    - name: Wait for applications to shut down
+      ansible.builtin.pause:
+        seconds: 3
+
+    - name: Collect results back to the local host machine
+      ansible.builtin.fetch:
+        src: /home/pi/iot-2026/experiments/with-membrane/state-continuity/iwasm.log
+        dest: "../results/{{ inventory_hostname }}_iwasm.log"
+        flat: true
